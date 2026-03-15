@@ -87,6 +87,16 @@ geometry. Even after all that, the clip (being compliant) is still a seeming tar
 However, in the case of the clip geometry, the aforementioned 2.0mm rounded square pad helps to ensure that the clip
 itself does not bear the brunt of the torque-induced stresses when inserted into a socket.
 
+## Standard Orientation
+
+By default, when considering horizontal Plaice plates, it's typical to assume that the top side of the plate is for inserting clipped connectors,
+and the bottom half is where components with nubbed connectors get inserted. The reasoning for this is based upon the geometry of beams:
+The bottom of a beam needs to be able to sit flat on a surface. Consequently, the bottom of a beam cannot protrude, as would be required
+for a nubbed connector to reach the correct mating depth, and so it instead has a clipped connector embedded in a socket at the bottom and a nubbed
+connector on top. Consistency with beam orientation is important for shelves, because it determines what can be mounted to the top surface of the shelf,
+and generally, that includes all sorts of things, like Gridfinity baseplates. Conversely, the bottom side of a Plaice plate is a good place for
+e.g: Gridfinity mounts by analogous reasoning.
+
 ## M2 Bolt Usage
 Clipped connectors typically have a channel on their side for the insertion of a M2 hex nut. When fully inserted, the nut is held
 captive against some backing walls, preventing rotation. A hole on the front face of the clipped connector allows access to the
