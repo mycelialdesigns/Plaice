@@ -89,3 +89,6 @@ adjustments to the slide interface:
 As a direct consequence, the CAD files which make up Plaice have to take print orientation into careful consideration, since
 the relevant files to reference for slides will heavily depend on it. While this adds complexity for designers, the corrections
 are worthwhile to allow for tighter tolerances (and consequently, less potential deflection between parts in a Plaice assembly.)
+
+When a slide is part of a Plaice component, care must also be taken to ensure that there's enough clearance for a plate connected
+via the slide to be able to slide freely, which may require applying clearances to extra surfaces. This happens in (TODO: cite)
