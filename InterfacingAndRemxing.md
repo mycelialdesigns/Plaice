@@ -54,6 +54,5 @@ structural reasons for individual users of the system to want to minimize those 
 the system to their own printer. As a result, exported non-parametric 3d models are in a bit of a difficult
 spot -- while they can be remixed, providing all standard clearance levels would require creating multiple
 different copies of those models, which is frankly somewhat of a pain. To partially settle this,
-in the case of direct 3d model remixes, 
-
-## On Including Batteries
+in the case of direct 3d model remixes, Plaice parts in the so-called "standard" clearance level are the preferred
+source for edits. 
