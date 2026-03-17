@@ -24,11 +24,36 @@ components ensure that the ecosystem of derived files remains open to remixing, 
 an unbroken chain of attribution. Both are crucial to the kind of ecosystem that Plaice intends to cultivate.
 
 ## How-To
+There are multiple different ways to create new components for Plaice or to remix existing components,
+each with their own tradeoffs.
 
 ### Lowest Friction, Lowest Customizability: Glue-Together Parts
 
+By far the easiest and most-preferred way to integrate with Plaice is to simply depend upon gluing printed parts on to
+a Plaice clipped or nubbed cover, as described in more detail on the dedicated page (TODO: link here!).
+While this is incredibly low-friction for the designer, and is completely agnostic to choice
+of technoogies, it only generally applies to components which only seek to integrate with the
+connector-and-socket portion of Plaice. Anything else will need to use one of the two other methods.
+
 ### Medium Friction, High Customizability: CAD Derivatives
 
+The next-preferred way to integrate with Plaice is to leverage the FreeCAD files made available in this repository.
+Parts in those files use a hybrid of referencing a spreadsheet (`sheet.FCStd`) for "Plaice global" values which define
+the system, and copy-on-change linked objects with custom properties (TODO: cite MangoJelly vids) for values which
+define the configurations of components. To use them, simply create a copy of the CAD directory from this repo, and
+add new FreeCAD file(s) devoted to your design which reference the base Plaice system files, or modify the Plaice
+system CAD files directly. Once you are finished with design, optionally export models of your component(s) at the different standard
+clearance levels, and upload 'em somewhere together with any CAD files that you created, used or modified which depend on
+Plaice components.
+
 ### Medium-High Friction, High Customizability: STL Modifications
+
+3d printing has an extensive .stl remix culture, and so it's important that Plaice supports the workflow.
+However, in Plaice, the clearances applied to connectors and slides are _meaningful_, and there are good
+structural reasons for individual users of the system to want to minimize those clearances to tune
+the system to their own printer. As a result, exported non-parametric 3d models are in a bit of a difficult
+spot -- while they can be remixed, providing all standard clearance levels would require creating multiple
+different copies of those models, which is frankly somewhat of a pain. To partially settle this,
+in the case of direct 3d model remixes, 
 
 ## On Including Batteries
