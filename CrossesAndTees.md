@@ -26,3 +26,7 @@ along the flat.
 
 Tees are named after whether their right-angle connection is protruding or intruding, and the clearance level (slide or glide). 
 Just like with crosses, "glide" tees are denoted by two parallel lines engraved onto the top and bottom faces. 
+
+### Printability modifications
+
+All tees have a printability modification which adds a thick brim to their outer straight to help prevent the tee from toppling while printing.
