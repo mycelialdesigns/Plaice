@@ -7,6 +7,11 @@ they serve a similar purpose to the "baseplates" in Gridfinity and other similar
 are a central component which all other components of the system can connect to, but the "base" prefix
 is dropped to avoid the connotation of a fundamental placement or orientation.
 
-## Design notes
+## Printability modifications
 
-## Printing Notes
+The "printable" version of plates requires no supports to print, because the necessary supports are baked in
+to the design. First, mouse ears were added to the design to protect corners and overhanging protruding slides
+from warping while providing somewhat better bed adhesion for small plates. Then, for supports, two preforated-boundary
+single-perimeter strips support both the intruding and protruding slides' overhangs at points where they are _concave up_,
+with the strips more or less equidistant from the local minima there. This is done to minimize the impact that leftover
+scarring from the preforations would have on the overall fitment of slides on plates.
