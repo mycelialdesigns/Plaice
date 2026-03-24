@@ -1,11 +1,19 @@
 # Corner Stacking Caps
 
+<img src="/docs/images/thickcornerstackinglip/thickcornerstackinglip.jpg" alt="A Corner Stacking Cap, Thick Variant" width="256" height="256"> <img src="/docs/images/thincornerstackinglip/thincornerstackinglip.jpg" alt="A Corner Stacking Cap, Thin Variant" width="256" height="256"> 
+
 Plaice corner stacking caps perform an analogous function to corner caps in Plaice, but for the top corners of open-top boxes.
 Both designs for corner stacking caps allow stacking other Plaice boxes of identical footprint on top, but differing in
 their suitability for boxes based on size.
 
+## "Thin" Variant
+<img src="/docs/images/thincornerstackinglip/thincornerstackinglip.jpg" alt="A Corner Stacking Cap, Thin Variant" width="256" height="256"> <img src="/docs/images/thincornerstackinglip/thincornerstackinglipbottom.jpg" alt="A Corner Stacking Cap, Thin Variant, Bottom View" width="256" height="256"> 
+
 For small boxes, the "thin" variant effectively just continues a stacking lip around the corner of a box, and as a result,
 it is unsuitable for large boxes or large deformations. 
+
+## "Thick" Variant
+<img src="/docs/images/thickcornerstackinglip/thickcornerstackinglip.jpg" alt="A Corner Stacking Cap, Thick Variant" width="256" height="256"> <img src="/docs/images/thickcornerstackinglip/thickcornerstackinglipbottom.jpg" alt="A Corner Stacking Cap, Thick Variant, Bottom View" width="256" height="256">
 
 For larger boxes or more weight, the "thick" variant instead adds a platform spanning the corner which has a stub socket on it.
 The stub socket is intended to be used with the "stacking pegs" (TODO: link) of Plaice for any boxes above it, since the stub
