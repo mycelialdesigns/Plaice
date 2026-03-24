@@ -1,4 +1,5 @@
 # Slide Clips
+<img src="/docs/images/slideclip.jpg" alt="A Slide Clip" width="256" height="256">
 
 Plaice slide clips fuse a clipped plug to a protruding slide connector, with positioning set to match the positioning
 of plates which would otherwise be obtained via crosses and tees. (TODO: link others) They are largely useful
