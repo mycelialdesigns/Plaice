@@ -1,5 +1,7 @@
 # Thru-Nubs
 
+<img src="/docs/images/thrunubs/thrunubside.jpg" alt="A Thru-nub, Side View" width="256" height="256"> <img src="/docs/images/thrunubs/thrunubtop.jpg" alt="A Thru-nub, Top View" width="256" height="256"> 
+
 A Plaice thru-nub is essentially a clipped and a nubbed plug fused onto the backs of one another, but with the usual M2 interface
 replaced by a single thru-hole for a M2 bolt. 
 
