@@ -1,5 +1,7 @@
 # Beams
 
+<img src="/keyaccessbeam.jpg" alt="Key-Access Beam" width="400" height="400">
+
 Plaice beams are components which are commonly used as "legs" or "columns" of free-standing shelves.
 They consist of a 1CUx1CU base with a clip embedded in a socket and an optionally-tapered top which
 can be 1CUx1CU (not tapered), 1CUx2CU (tapered along one direction), or 2CUx2CU (tapered along both
