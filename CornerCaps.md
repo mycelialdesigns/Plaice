@@ -1,5 +1,7 @@
 # Corner Caps
 
+<img src="/docs/images/cornercap/cornercap.jpg" alt="A Corner Cap" width="256" height="256"> <img src="/docs/images/cornercap/cornercapback.jpg" alt="A Corner Cap, Back View" width="256" height="256"> 
+
 Plaice corner caps are used whenever three Plaice corners meet with three plates spanning between them, and they
 "cap off" the remaining space to a point. They have two real slide connectors along what resembles a Plaice "corner"
 component and four other "stub" slide
