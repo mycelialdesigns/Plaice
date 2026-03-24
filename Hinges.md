@@ -1,5 +1,7 @@
 # Hinges
 
+<img src="/docs/images/hinge.jpg" alt="A Hinge" width="256" height="256">
+
 Hinges allow Plaice components to rotate around a central axis, and allow many different constructions.
 
 Standard Plaice hinges are designed to align with the relative offset between slides obtained with a corner
