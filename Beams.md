@@ -1,6 +1,6 @@
 # Beams
 
-<img src="/keyaccessbeam.jpg" alt="Key-Access Beam" width="400" height="400">
+<img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Thru-Access Beam" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 Plaice beams are components which are commonly used as "legs" or "columns" of free-standing shelves.
 They consist of a 1CUx1CU base with a clip embedded in a socket and an optionally-tapered top which
@@ -19,13 +19,18 @@ of the top plate.
 Given that beams have a similar challenge to thru-nubs in that at least one of their nubbed connectors
 doesn't have immediately apparent access to its "back side", a similar solution (just putting a hole
 for M2 bolts to pass through) would seem to work, at least in some situations. (That variant
-of a beam is called a "thru beam") 
+of a beam is called a "thru beam")
+
+
+<img src="/docs/images/beams/thrubeam.jpg" alt="A Thru Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 However, beams can be fairly long, and it's pretty hard to find (or even to want) 
 excessively long M2 bolts. Consequently, there are two more beam variants which try to
 give access to the head of an inserted M2 bolt in two different ways.
 
 ### Thru-access bolted beams
+
+<img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Thru-Access Beam" width="256" height="256"> <img src="/docs/images/beams/thruaccessbeamside.jpg" alt="A Thru-Access Beam, Side View" width="256" height="256">
 
 So-called "thru-access" bolted beams depend upon being able to drop in a M2 bolt down
 a central channel _and tightening it_ before inserting a M2 nut into the nut channel during assembly,
@@ -36,6 +41,8 @@ integrity of connections to the captive nut, because the contacting surface area
 to accommodate a drop-in bolt channel.
 
 ### Hex key access bolted beams
+
+<img src="/docs/images/beams/keyaccessbeam.jpg" alt="A Key-Access Beam" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> 
 
 Hex-key access bolted beams carve a channel along the interior corner of the beam length which allows both
 a M2 bolt and an M2 hex key to be inserted into the channel, and the M2 hex key to be turned at 75 degree
