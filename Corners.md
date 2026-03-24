@@ -1,5 +1,7 @@
 # Corners
 
+<img src="/docs/images/corner/corner.jpg" alt="A Corner" width="256" height="256"> <img src="/docs/images/corner/cornerback.jpg" alt="A Corner, Back View" width="256" height="256">
+
 A Plaice corner connects two Plaice plates at a right angle with a paired set of intruding and protruding slides. In that respect,
 it is analogous to crosses and tees (TODO: link), but for just two plates. Similarly, using a corner or using one of a cross or a tee
 to orient two plates at identical right angles will result in identical placement (center of the next plate is 1.5HU from the logical
