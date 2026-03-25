@@ -1,12 +1,12 @@
 # Crosses and Tees
 
-<img src="/docs/images/cross.jpg" alt="Crosses, Glide and Slide" width="256" height="256"> <img src="/docs/images/tee.jpg" alt="Tees, Top row Slides, Bottom Glides, Protruding and Intruding " width="256" height="256">
+<img src="/docs/images/crossesandtees/cross.jpg" alt="Crosses, Glide and Slide" width="256" height="256"> <img src="/docs/images/crossesandtees/tee.jpg" alt="Tees, Top row Slides, Bottom Glides, Protruding and Intruding " width="256" height="256">
 
 It's common in Plaice for two or more plates to meet at right angles to each other, with some kind of connector between them. In the case
 where there are only two plates, corners are used (TODO: link), but in situations where more plates meet, crosses and tees are needed instead.
 
 ## Crosses
-<img src="/docs/images/cross.jpg" alt="Crosses, Glide and Slide" width="256" height="256"> 
+<img src="/docs/images/crossesandtees/cross.jpg" alt="Crosses, Glide and Slide" width="256" height="256"> 
 
 When four plates meet, a cross connector may be used to hold them together with slide (or glide) connections. 
 
@@ -22,7 +22,7 @@ The intruding and protruding connectors of crosses are set up so as to not rever
 connected along the straights of the cross, which enables easier reasoning about plate orientations. 
 
 ## Tees
-<img src="/docs/images/tee.jpg" alt="Tees, Top row Slides, Bottom Glides, Protruding and Intruding " width="256" height="256">
+<img src="/docs/images/crossesandtees/tee.jpg" alt="Tees, Top row Slides, Bottom Glides, Protruding and Intruding " width="256" height="256">
 
 Tees are for when three Plaice plates meet. They are basically crosses with one of the slide connectors removed, with the removed-connector
 side given several stub Plaice sockets along the flat. This is done to maintain the continuity of the socket grid across plates connected
@@ -32,6 +32,6 @@ Tees are named after whether their right-angle connection is protruding or intru
 Just like with crosses, "glide" tees are denoted by two parallel lines engraved onto the top and bottom faces. 
 
 ### Printability modifications
-<img src="/docs/images/teesupports.webp" alt="A Protruding Slide Tee, just after printing" width="256" height="256">
+<img src="/docs/images/crossesandtees/teesupports.webp" alt="A Protruding Slide Tee, just after printing" width="256" height="256">
 
 All tees have a printability modification which adds a thick brim to their outer straight to help prevent the tee from toppling while printing.
