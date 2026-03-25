@@ -20,3 +20,8 @@ The stub socket is intended to be used with the "stacking pegs" (TODO: link) of 
 socket provides a stable, predictable place for the corners of large or heavy boxes to seat. The support for the platform
 is fairly bulky for the sake of strength, but does taper towards a single cover's thickness at the bottom. Overall, the platform
 is 1CU in height, and should be assumed to take up an entire 1CUx1CUx1CU block for the sake of assemblies.
+
+## Printing Tips
+<img src="/docs/images/thincornerstackinglip/thincornerstackinglipsupports.webp" alt="A Corner Stacking Cap, Thin Variant, just after printing" width="256" height="256"> <img src="/docs/images/thickcornerstackinglip/thickcornerstackinglipsupports.webp" alt="A Corner Stacking Cap, Thick Variant, just after printing" width="256" height="256">
+
+Print both variants with supports for the sake of the bottom flats of the stub slides.
