@@ -32,5 +32,6 @@ Tees are named after whether their right-angle connection is protruding or intru
 Just like with crosses, "glide" tees are denoted by two parallel lines engraved onto the top and bottom faces. 
 
 ### Printability modifications
+<img src="/docs/images/teesupports.webp" alt="A Protruding Slide Tee, just after printing" width="256" height="256">
 
 All tees have a printability modification which adds a thick brim to their outer straight to help prevent the tee from toppling while printing.
