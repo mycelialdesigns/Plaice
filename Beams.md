@@ -55,7 +55,7 @@ allows for large lengths, but also pretty much _requires_ a beam which is longer
 
 As is the case with all other Plaice components with sensitive geometry on both sides of any hypothetical print orientation along Z, when printing a beam, the nubbed connectors should be oriented downwards,
 so that their printability modification can be applied. Additionally, since the top of the beam (bottom in print orientation) has a flat of cell-unit-multiple sizing, support structures should be added to
-support that flat at the bottom of the print. 
+support that flat at the bottom of the print. None of the other surfaces on the underside of the print, like the nubbed connectors or their chamfers, should have generated supports -- it wastes filament, time, and just makes them more difficult to remove.
 
 <img src="/docs/images/beams/keyaccessbeamsupports.webp" alt="Key-access beam after printing" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottomsupports.webp" alt="Key-access beam after printing, bottom view" width="256" height="256">
 
