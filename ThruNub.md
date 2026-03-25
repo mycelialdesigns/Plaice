@@ -15,4 +15,6 @@ Or another Plaice plate can be stacked on top of the first one and secured with 
 
 # Printing
 
+<img src="/docs/images/thrunubs/thrunubprintability.webp" alt="A Thru-nub right after printing" width="256" height="256"> <img src="/docs/images/thrunubs/thrunubprintabilitybottom.webp" alt="A Thru-nub right after printing, Bottom View" width="256" height="256"> 
+
 The "printable" modification of thru-nubs may be printed without supports. 
