@@ -1,4 +1,6 @@
 # Clipped and Nubbed Connectors
+<img src="/docs/images/plugs/plugtops.jpg" alt="Plugs, Clipped and Nubbed" width="256" height="256"> <img src="/docs/images/plugs/plugstogether.jpg" alt="Plugs, Clipped and Nubbed Connected" width="256" height="256">
+
 
 Clipped and nubbed connector pairs provide a way to connect two Plaice components, most frequently inside of a Plaice socket.
 They are "snap" (compliant) connectors where the four clips of a "clipped" connector grabs on to the four nubs of a "nubbed" connector,
@@ -11,7 +13,7 @@ of Plaice sockets. Both types of connectors share the same four-fold rotational 
 and "nubs" arranged along the edges of the rounded square base. For clipped connectors, that's all there is to the top-down layout,
 but for nubbed connectors, there is additionally a central octagonal island and four corner islands. 
 
-### Clip and nub geometry
+### Clip geometry
 
 The geometry of the clips is very carefully engineered for their small 5.0mmx2.3mm footprint to ensure that they won't break
 under typical use (and then some) in Plaice. The clip prongs are tapered in such a way that it does not take many layers from
@@ -110,6 +112,8 @@ M2 connection is undone, which can have many practical structural purposes in Pl
 to realize that adding M2s is not a silver bullet -- an assembly can still be structurally weak even if all snaps have M2s.
 
 ## Printability Modifications
+<img src="/docs/images/thrunubs/thrunubprintabilitybottom.webp" alt="Thru-nub Bottom, Showing Mouse Ears" width="256" height="256"> <img src="/docs/images/opengrid/opengridprintability.webp" alt="OpenGrid mount plate bottom" width="256" height="256">
+
 The print orientation of clipped and nubbed connectors is almost always such that their front and back faces align with the +-Z
 printer axis, because typically they are printed in arrays on Plaice components which are intended to affix the component
 to a Plaice plate, and so it generally makes sense to align the XY printer plane and the plane of these arrays. However,
@@ -133,3 +137,24 @@ in print orientation. Secondly, the geometry of the clip connectors would requir
 generated at the four corners of its layout, because unlike nubbed connectors, there is nothing in the corners on
 the bottom printed layers for the base of the connector to bridge from. While that problem isn't insurmountable,
 its inconvenience and low probability of use mean that it is currently unimplemented in Plaice. 
+
+### Support removal for nubs
+The process for removing the supports on nubs is fairly simple, if a little tedious.
+#### Step 1: Clear Surroundings
+<img src="/docs/images/opengrid/opengridsuportremovalpart2.webp" alt="Visual result of step 1" width="256" height="256">
+
+First remove any surrounding supports, such as the support structure generated for the flat of the OpenGrid mount plate bottom as shown in the section
+above, to obtain something like the image shown for this step. In many cases, this will remove most of the mouse-ears attached to the nubs, but if it
+doesn't remove all of them, manually pick them off one-by-one, like flower petals.
+#### Step 2: Break bridges
+<img src="/docs/images/opengrid/opengridsupportremovalpart3.webp" alt="Visual for step 2" width="256" height="256">
+
+Using a pair of needle-nose pliers, grab onto the bridges between the corner squares and the central island on each nubbed connector, and twist
+the pliers to cut/break each bridge. Don't worry if material is still hanging off of one side or the other -- there's enough clearance in the design
+that this small bit of material won't matter for the sake of fitment. Be somewhat careful to avoid accidentally ripping off the corner squares in
+the process, but don't panic if you do -- a few missing connector corners in a large array of nubbed connectors ultimately won't impact much.
+
+#### Finish
+<img src="/docs/images/opengrid/opengridsupportremovalend.webp" alt="Final visual" width="256" height="256">
+
+
