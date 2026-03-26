@@ -8,12 +8,15 @@ preventing movement between the two halves until the connection is undone throug
 
 ## Geometry
 
+<img src="/docs/images/connectorinterface/connectorinterface.png" alt="Connector interface, 1/8 of the top-down schematic" width="512" height="512">
+
 Clipped and nubbed connectors have a rounded square footprint which fits inside
 of Plaice sockets. Both types of connectors share the same four-fold rotational symmetry about their center, with the eponymus "clips"
 and "nubs" arranged along the edges of the rounded square base. For clipped connectors, that's all there is to the top-down layout,
 but for nubbed connectors, there is additionally a central octagonal island and four corner islands. 
 
 ### Clip geometry
+<img src="/docs/images/connectorinterface/clippedpluginterface.png" alt="1/2 of a clip profile" width="512" height="512">
 
 The geometry of the clips is very carefully engineered for their small 5.0mmx2.3mm footprint to ensure that they won't break
 under typical use (and then some) in Plaice. The clip prongs are tapered in such a way that it does not take many layers from
@@ -27,6 +30,8 @@ The central arc's radius is maximized to spread out stresses encountered when th
 indicate that stress does not tend to concentrate there. 
 
 #### Clip FEM
+<img src="/docs/images/connectorinterface/clipFEM.png" alt="FEM on a Clip w/ heatmap of Frobenius norm of strain tensor" width="512" height="512">
+
 In order to ensure that the compliant clips stay functional after repeated use, a finite element analysis of the strains experienced
 by the clip when bent is very valuable, because it allows for optimization of the clip design. Additionally, for the clip geometry
 as defined above, to bound the value of the base width of the clip, it's necessary to simulate what happens when the clip is deformed
@@ -42,6 +47,7 @@ unwieldy. However, we _can_ input a formula for the Frobenius norm of the strain
 principal strain. 
 
 ### Nub Geometry
+<img src="/docs/images/connectorinterface/nubbedconnectorprofile.png" alt="1/2 of a nub profile" width="512" height="512">
 
 For the most part, the geometry of nubs is simply the inverse of that of clips, but the bottom of the nub is modified to connect
 to the connector base with a straight line as opposed to an arc. This nub base is set up in such a way that the bottom of the nub
