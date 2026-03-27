@@ -4,8 +4,8 @@
 
 Hinges allow Plaice components to rotate around a central axis, and allow many different constructions.
 
-Standard Plaice hinges are designed to align with the relative offset between slides obtained with a corner
-when oriented at 90 degrees from straight, and to continue with cell-unit alignment when held straight.
+Standard Plaice hinges are designed to align with the relative offset between [slides](/docs/design/SlideInterface.md) obtained with a [corner](/docs/components/Corners.md)
+when oriented at 90 degrees from straight, and to continue with [cell-unit](/docs/design/Units.md) alignment when held straight.
 
 ## Printing
 <img src="/docs/images/hinge/hingesupports.webp" alt="A Hinge, just after printing" width="256" height="256">
