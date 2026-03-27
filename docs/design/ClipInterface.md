@@ -2,7 +2,7 @@
 <img src="/docs/images/plugs/plugtops.jpg" alt="Plugs, Clipped and Nubbed" width="256" height="256"> <img src="/docs/images/plugs/plugstogether.jpg" alt="Plugs, Clipped and Nubbed Connected" width="256" height="256">
 
 
-Clipped and nubbed connector pairs provide a way to connect two Plaice components, most frequently inside of a Plaice socket.
+Clipped and nubbed connector pairs provide a way to connect two Plaice components, most frequently inside of a Plaice [socket](/docs/design/Sockets.md).
 They are "snap" (compliant) connectors where the four clips of a "clipped" connector grabs on to the four nubs of a "nubbed" connector,
 preventing movement between the two halves until the connection is undone through applied force to separate them. 
 
@@ -18,7 +18,7 @@ but for nubbed connectors, there is additionally a central octagonal island and 
 ### Clip geometry
 <img src="/docs/images/connectorinterface/clippedpluginterface.png" alt="1/2 of a clip profile" width="512" height="512">
 
-The geometry of the clips is very carefully engineered for their small 5.0mmx2.3mm footprint to ensure that they won't break
+The geometry of the clips is very carefully engineered for their small `~5.0 mm x ~2.3 mm` footprint to ensure that they won't break
 under typical use (and then some) in Plaice. The clip prongs are tapered in such a way that it does not take many layers from
 the tips of the clips to reach a width which is able to pack in two external perimeters, which allows the profile to mostly
 behave like a bulk material. The profile of a clip prong is made of three arcs, one for the clip center, one for the tip of
@@ -38,7 +38,7 @@ as defined above, to bound the value of the base width of the clip, it's necessa
 during connection to ensure that the clip prongs never have any part of them extend beyond the base footprint, because it would cause
 interference with the four corners of the paired nubbed connector.
 
-To analyze the results of the FEM, unlike the situation with the slide interface FEM (TODO: link), the stresses experienced by the
+To analyze the results of the FEM, unlike the situation with the [slide interface FEM](/docs/design/SlideInterface.md), the stresses experienced by the
 clip during connection are transient. Consequently, a static analysis like what was implemented in FreeCAD for this will not
 tell the whole picture, but we can still gain some useful insights from the analysis. In particular, we are interested in the
 strain experienced by the clip when bent to its "open" position, and want to minimize the maximum principal strain. Unfortunately,
@@ -76,14 +76,14 @@ through the fact that a clip can engage with a nub and still have some retaining
 
 ## Relation to Sockets
 
-Clipped and nubbed connectors are designed to fit inside of Plaice sockets, but the height of the connectors is only half (2.0mm) of the
-central portion of a Plaice socket (4.0mm), and so at first, it would seem like we're leaving extra space on the table. Even stranger,
-clipped connectors in Plaice typically sit atop a 2.0mm rounded square pad, but nubbed connectors don't have this! What gives?
+Clipped and nubbed connectors are designed to fit inside of Plaice sockets, but the height of the connectors is only half (`2.0 mm`) of the
+central portion of a Plaice socket (`4.0 mm`), and so at first, it would seem like we're leaving extra space on the table. Even stranger,
+clipped connectors in Plaice typically sit atop a `2.0 mm` rounded square pad, but nubbed connectors don't have this! What gives?
 
 There are two primary reasons for this apparent asymmetry, and both are related to how the system can accommodate alternative
-types of connections which don't rely upon the clip-and-nub geometry. First, the 2.0mm rounded square pad provides valuable
+types of connections which don't rely upon the clip-and-nub geometry. First, the `2.0 mm` rounded square pad provides valuable
 space for the clipped connectors to be able to accommodate a captive M2 nut, which would be virtually impossible without it.
-Second, it allows "stub" connectors consisting just of a 2.0mm rounded square pad on a plug to mate with a nubbed plug.
+Second, it allows "stub" connectors consisting just of a `2.0 mm` rounded square pad on a plug to mate with a nubbed plug.
 While that may not seem terribly useful at first, it does open the door to the possibility of _routed_ Plaice components
 which would otherwise need clipped connectors. While the current iteration of this specification doesn't include it,
 future iterations should.
@@ -92,18 +92,18 @@ There's another, more subtle, more structural reason. The positioning of the cli
 they make contact with an enclosing socket, preventing rotation. Consequently, they are made to be as thick as they possibly can
 be considering the limited footprint of the connectors, applied clearances, and other objectives and constraints related to clip
 geometry. Even after all that, the clip (being compliant) is still a seeming target for accidental breakage.
-However, in the case of the clip geometry, the aforementioned 2.0mm rounded square pad helps to ensure that the clip
+However, in the case of the clip geometry, the aforementioned `2.0 mm` rounded square pad helps to ensure that the clip
 itself does not bear the brunt of the torque-induced stresses when inserted into a socket.
 
 ## Standard Orientation
 
-By default, when considering horizontal Plaice plates, it's typical to assume that the top side of the plate is for inserting clipped connectors,
-and the bottom half is where components with nubbed connectors get inserted. The reasoning for this is based upon the geometry of beams:
+By default, when considering horizontal Plaice [plates](/docs/components/Plates.md), it's typical to assume that the top side of the plate is for inserting clipped connectors,
+and the bottom half is where components with nubbed connectors get inserted. The reasoning for this is based upon the geometry of [beams](/docs/components/Beams.md):
 The bottom of a beam needs to be able to sit flat on a surface. Consequently, the bottom of a beam cannot protrude, as would be required
 for a nubbed connector to reach the correct mating depth, and so it instead has a clipped connector embedded in a socket at the bottom and a nubbed
 connector on top. Consistency with beam orientation is important for shelves, because it determines what can be mounted to the top surface of the shelf,
-and generally, that includes all sorts of things, like Gridfinity baseplates. Conversely, the bottom side of a Plaice plate is a good place for
-e.g: Gridfinity mounts by analogous reasoning.
+and generally, that includes all sorts of things, like [Gridfinity baseplates](/docs/components/GridfinityIntegration.md).
+Conversely, the bottom side of a Plaice plate is a good place for e.g: Gridfinity mounts by analogous reasoning.
 
 ## M2 Bolt Usage
 Clipped connectors typically have a channel on their side for the insertion of a M2 hex nut. When fully inserted, the nut is held
@@ -123,7 +123,7 @@ to realize that adding M2s is not a silver bullet -- an assembly can still be st
 The print orientation of clipped and nubbed connectors is almost always such that their front and back faces align with the +-Z
 printer axis, because typically they are printed in arrays on Plaice components which are intended to affix the component
 to a Plaice plate, and so it generally makes sense to align the XY printer plane and the plane of these arrays. However,
-this raises a problem for components (e.g: thru-nubs, beams (TODO: link!)) which have clip or nub connectors on opposing sides:
+this raises a problem for components (e.g: [thru-nubs](/docs/components/ThruNub.md), [beams](/docs/components/Beams.md)) which have clip or nub connectors on opposing sides:
 Which connector should be on the bottom (and consequently, require some support and/or support removal, and possibly experience
 some surface deformations due to sagging), and which should be on the top? Intuition would say that the clipped connector
 is more intricate, and with more delicate features (compliant clips), and so it should belong on top.
@@ -133,7 +133,7 @@ on the print bed to improve print quality, first layer adhesion, and the ease of
 of the nubbed connector makes it relatively easy to do so. Assuming that the tips of the nubs and all four corners have
 good bed adhesion, bridging between them is a piece of cake given the involved dimensions. However, by default, they
 don't have good bed adhesion. To improve this, an eight-petaled contiguous shape is formed on the first layer
-to provide "mouse ears" for the first layer. (TODO: include picture) This dramatically improves adhesion, and consequently
+to provide "mouse ears" for the first layer. This dramatically improves adhesion, and consequently
 allows nubbed connectors to be printed upside-down without generated support structures.
 
 There is no such similar printability modification for clipped connectors. This is for two primary reasons:
@@ -149,7 +149,8 @@ The process for removing the supports on nubs is fairly simple, if a little tedi
 #### Step 1: Clear Surroundings
 <img src="/docs/images/opengrid/opengridsuportremovalpart2.webp" alt="Visual result of step 1" width="256" height="256">
 
-First remove any surrounding supports, such as the support structure generated for the flat of the OpenGrid mount plate bottom as shown in the section
+First remove any surrounding supports, such as the support structure generated for the flat of the [OpenGrid mount](/docs/components/OpenGridIntegration.md)
+plate bottom as shown in the section
 above, to obtain something like the image shown for this step. In many cases, this will remove most of the mouse-ears attached to the nubs, but if it
 doesn't remove all of them, manually pick them off one-by-one, like flower petals.
 #### Step 2: Break bridges
