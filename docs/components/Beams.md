@@ -3,20 +3,21 @@
 <img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Thru-Access Beam" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 Plaice beams are components which are commonly used as "legs" or "columns" of free-standing shelves.
-They consist of a `1 CU x 1 CU` base with a clip embedded in a socket and an optionally-tapered top which
+They consist of a [`1 CU x 1 CU`](/docs/design/Units.md) base with a [clipped connector](/docs/design/ClipInterface.md)
+embedded in a [socket](/docs/design/Sockets.md) and an optionally-tapered top which
 can be `1 CU x 1 CU` (not tapered), `1 CU x 2 CU` (tapered along one direction), or `2 CU x 2 CU` (tapered along both
 directions), and has nubbed connectors on top.
 
-Tapered beams are largely helpful for minimizing deflection of plates mounted on top of them due
+Tapered beams are largely helpful for minimizing deflection of [plates](/docs/components/Plates.md) mounted on top of them due
 to the increased moment the taper gives against plate deflection. Their tapers are `.75 HU` in height
 to ensure that `1 HU` of clearance in an assembly is enough to accomodate e.g: a cover on top of a plate
 which is `1 HU` below the plate atop the beam. Just before the nubbed connectors, the taper also has
-a `.25 HU` pad to provide visual seamlessness with any nubbed covers mounted to the bottom side
+a `.25 HU` pad to provide visual seamlessness with any [nubbed covers](/docs/components/Covers.md) mounted to the bottom side
 of the top plate. 
 
 ## M2 Bolt Integration Variants
 
-Given that beams have a similar challenge to thru-nubs in that at least one of their nubbed connectors
+Given that beams have a similar challenge to [thru-nubs](/docs/components/ThruNub.md) in that at least one of their nubbed connectors
 doesn't have immediately apparent access to its "back side", a similar solution (just putting a hole
 for M2 bolts to pass through) would seem to work, at least in some situations. (That variant
 of a beam is called a "thru beam")
