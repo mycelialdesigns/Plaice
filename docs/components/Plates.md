@@ -3,8 +3,9 @@
 <img src="/docs/images/plate/plate.jpg" alt="A Plaice Plate" width="256" height="256">
 
 The single most important Plaice component, plates give the rest of the system a structural base.
-A plate consists of a `7mm` (`1 HU`) rectangular slab covered in an array of sockets spaced `21mm` (`1 CU`) apart,
-with opposing pairs of intruding and protruding slides along the perimeter. Plates are so named because
+A plate consists of a `7mm` (`1 HU`) rectangular slab covered in an array of [sockets](/docs/design/Sockets.md)
+spaced `21mm` ([`1 CU`](/docs/components/design/Units.md)) apart,
+with opposing pairs of intruding and protruding [slides](/docs/design/SlideInterface.md) along the perimeter. Plates are so named because
 they serve a similar purpose to the "baseplates" in Gridfinity and other similar systems, in that they
 are a central component which all other components of the system can connect to, but the "base" prefix
 is dropped to avoid the connotation of a fundamental placement or orientation.
