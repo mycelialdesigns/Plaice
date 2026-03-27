@@ -1,4 +1,5 @@
 # Slide Interface
+<img src="/docs/images/slideinterface/slideinterface.png" alt="Slide Interface" width="512" height="512">
 
 Slide connections allow Plaice components to join in a way which effectively leaves only one degree of freedom unconstrained.
 The curve ("profile") projected on the plane normal to that degree of freedom which is sandwiched between an idealized
@@ -11,9 +12,9 @@ shape optimized for strength. In particular, the slides are designed so that whe
 two Plaice plates along a span which is supported at both ends, the slides will not break, even when a heavy weight is applied.
 
 By itself, the above paragraph does not completely constrain the interface profile, but when combined with the following other requirements:
-- Leave at least .8mm (two perimeters with a .4mm nozzle) of material between a plate's socket-chamfer and the closest point on the slide profile. 
+- Leave at least `0.8 mm` (two perimeters with a `0.4 mm` nozzle) of material between a plate's socket-chamfer and the closest point on the slide profile. 
 - Use only simple geometric primitives (arcs and line segments)
-- Ensure that all arcs have greater than some minimum diameter (.8mm) for manufacturability
+- Ensure that all arcs have greater than some minimum diameter (`0.8 mm`) to ensure a baseline level of smoothness in real prints.
 - Even under the largest clearance between slides employed by Plaice, the two halves of a slide do not separate without substantial force.
 
 ... the shape becomes a bit more explainable, albeit still fairly underspecified. To put the shape of the interface into sharper focus,
@@ -33,12 +34,14 @@ can be reduced. For the slide interface profile, this means ensuring a vertical 
 
 #### Asymptotic Strength Under Plate Stacking
 
+<img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="512" height="512">
+
 There are plenty of situations where a 7mm thick 3d-printed PLA plates just aren't going to cut it for a given loading regime. 
 In those situations, it's reasonable to want to stack plates on top of each other, and somehow secure them to form a larger composite.
-In Plaice, this option is readily available through the use of thru-nubs, as shown in the following picture: (TODO: add!)
+In Plaice, this option is readily available through the use of thru-nubs and plugs.
 
 Now, consider what happens when a stack of plates with identical orientations is connected to another stack of plates
-using slides -- visually, the result looks something like this (TODO: add!):
+using slides -- visually, the result looks something like the picture above.
 
 In order to minimize the maximal stress under an applied load, it is generally a good idea to spread the induced stresses
 over the largest possible area. One natural way to do this for the situation of the stacked plates is to attempt to ensure
@@ -47,9 +50,11 @@ criterion verbatim, but we can do the next best thing: We can ensure that the _r
 to each other.
 
 To do this, all we need to do is to ensure that between every two stacked protrusions, there's an intrusion formed, and
-between every two stacked intrusions, there's a protrusion formed. This is another kind of mirror symmetry, as pictured below (TODO: add!)
+between every two stacked intrusions, there's a protrusion formed. This is another kind of mirror symmetry.
 
 ## FEM Optimization
+
+<img src="/docs/images/slideinterface/slideFEM.png" alt="Slide FEM, Heatmap of Maximum Principal Stress" width="512" height="512">
 
 After the constraints mentioned in the previous section have been applied, the final shape of the Plaice slide interface is obtained
 by performing hill-climbing on the maximal stress minimization objective (see (TODO: cite FEM source file)). In particular, since the
