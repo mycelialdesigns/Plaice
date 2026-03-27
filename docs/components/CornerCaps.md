@@ -2,11 +2,11 @@
 
 <img src="/docs/images/cornercap/cornercap.jpg" alt="A Corner Cap" width="256" height="256"> <img src="/docs/images/cornercap/cornercapback.jpg" alt="A Corner Cap, Back View" width="256" height="256"> 
 
-Plaice corner caps are used whenever three Plaice corners meet with three plates spanning between them, and they
-"cap off" the remaining space to a point. They have two real slide connectors along what resembles a Plaice "corner"
+Plaice corner caps are used whenever three Plaice [corners](/docs/components/Corners.md) meet with three [plates](/docs/components/Plates.md) spanning between them, and they
+"cap off" the remaining space to a point. They have two real [slide connectors](/docs/design/SlideInterface.md) along what resembles a Plaice "corner"
 component and four other "stub" slide
-connectors, with each protruding `1 CU` from the logical "corner" where the plates associated cell-unit grids meet.
-The internal geometry is designed to be able to accommodate covers mounted on each of the three attached plates,
+connectors, with each protruding [`1 CU`](/docs/design/Units.md) from the logical "corner" where the plates associated cell-unit grids meet.
+The internal geometry is designed to be able to accommodate [covers](/docs/components/Covers.md) mounted on each of the three attached plates,
 and the length of the chamfer is identical to the internal chamfer on corners. The external
 chamfers are identical to the ones encountered on the outside of corner connectors.
 
