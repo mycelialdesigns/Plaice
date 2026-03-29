@@ -2,7 +2,7 @@
 
 <img src="/docs/images/opengrid/opengridbaseplate.jpg" alt="An OpenGrid baseplate glue-on" width="256" height="256"> <img src="/docs/images/opengrid/opengridmountbottom.jpg" alt="An OpenGrid mount, bottom view" width="256" height="256">
 
-Plaice integrates with OpenGrid bidirectionally, with the ability to mount OpenGrid baseplates to Plaice [plates](/docs/components/Plates.md) and vice-versa.
+Plaice integrates with [OpenGrid](https://www.opengrid.world/) bidirectionally, with the ability to mount OpenGrid baseplates to Plaice [plates](/docs/components/Plates.md) and vice-versa.
 Four Plaice [cell units](/docs/design/Units.md) are identical to three OpenGrid cell units, which means that the length required to synchronize
 is `84mm`. 
 
