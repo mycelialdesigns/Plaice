@@ -41,7 +41,7 @@ bidirectional integrations would be unwieldy, but at the time of writing, no suc
 
 ## Height Units
 
-Along the Z axis, a Plaice plate is `7 mm` thick. A length of `7 mm` is known as a "Height Unit" (HU), and it also appears frequently in Plaice
+Along the Z axis, a Plaice plate is `7 mm` thick. A length of `7 mm` is known as a **Height Unit** (HU), and it also appears frequently in Plaice
 definitions. This value is identical to a Gridfinity "height unit", though largely by coincidence. From divisibility principles mentioned in the previous section,
 and due to the potentially-arbitrary orientation of Plaice plates in space, the thickness of a Plaice plate should evenly divide a grid unit. 21=7*3, and 3mm
 is far too thin, so 7mm it is. 
