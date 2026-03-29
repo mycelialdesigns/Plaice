@@ -12,7 +12,7 @@ including 3d model files.
 The OHL-S is a "strongly reciprocal" license, meaning that any released CAD files or other
 released files which use Plaice's CAD files must share the preferred form of the source file for making modifications,
 which is most often the derivative CAD file(s) in question. In adopting the license for CAD files, Plaice intends
-to prevent the scenario of a designer privately holding on to a CAD file, and only releasing .STLs for public
+to prevent the scenario of a designer privately holding on to a CAD file, and only releasing `.stl`s for public
 consumption due to some ulterior motive (possibly, but not necessarily commercialization-related.) Plaice
 _does not care_ if the designs are mass-printed and sold, but the project does care about ensuring that
 designers and consumers are on equal footing, and that if Plaice is part of somebody's path to becoming
@@ -30,7 +30,7 @@ each with their own tradeoffs.
 ### Lowest Friction, Lowest Customizability: Glue-Together Parts
 
 By far the easiest and most-preferred way to integrate with Plaice is to simply depend upon gluing printed parts on to
-a Plaice clipped or nubbed cover, as described in more detail on the dedicated page (TODO: link here!).
+a Plaice [clipped or nubbed cover](/docs/components/Covers.md), as described in more detail on the [dedicated page](/docs/design/GlueTogetherComponents.md).
 While this is incredibly low-friction for the designer, and is completely agnostic to choice
 of technoogies, it only generally applies to components which only seek to integrate with the
 connector-and-socket portion of Plaice. Anything else will need to use one of the two other methods.
@@ -39,7 +39,7 @@ connector-and-socket portion of Plaice. Anything else will need to use one of th
 
 The next-preferred way to integrate with Plaice is to leverage the FreeCAD files made available in this repository.
 Parts in those files use a hybrid of referencing a spreadsheet (`sheet.FCStd`) for "Plaice global" values which define
-the system, and copy-on-change linked objects with custom properties (TODO: cite MangoJelly vids) for values which
+the system, and copy-on-change linked objects with custom properties (see, e.g: [MangoJelly](https://www.patreon.com/mangojellysolutions)'s [video](https://www.youtube.com/watch?v=9mohplbz7Wg) about the topic) for values which
 define the configurations of components. To use them, simply create a copy of the CAD directory from this repo, and
 add new FreeCAD file(s) devoted to your design which reference the base Plaice system files, or modify the Plaice
 system CAD files directly. Once you are finished with design, optionally export models of your component(s) at the different standard
@@ -48,7 +48,7 @@ Plaice components.
 
 ### Medium-High Friction, High Customizability: STL Modifications
 
-3d printing has an extensive .stl remix culture, and so it's important that Plaice supports the workflow.
+3d printing has an extensive `.stl` remix culture, and so it's important that Plaice supports the workflow.
 However, in Plaice, the clearances applied to connectors and slides are _meaningful_, and there are good
 structural reasons for individual users of the system to want to minimize those clearances to tune
 the system to their own printer. As a result, exported non-parametric 3d models are in a bit of a difficult
