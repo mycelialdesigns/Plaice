@@ -2,7 +2,7 @@
 
 <img src="/docs/images/gridfinity/gridfinitybaseplate.jpg" alt="A Gridfinity Baseplate Glue-on" width="256" height="256"> <img src="/docs/images/gridfinity/gridfinitymountbottom.jpg" alt="A Gridfinity Mount, Bottom View" width="256" height="256">
 
-Plaice integrates with Gridfinity bidirectionally, and Plaice assemblies can be treated as Gridfinity bins or as a place to mount Gridfinity baseplates.
+Plaice integrates with [Gridfinity](https://gridfinity.xyz/) bidirectionally, and Plaice assemblies can be treated as Gridfinity bins or as a place to mount Gridfinity baseplates.
 Two Plaice [cell units](/docs/design/Units.md) are equivalent to one Gridfinity grid unit, and so the synchronizing length is `42mm`.
 
 ## Mounts
