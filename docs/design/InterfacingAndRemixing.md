@@ -6,7 +6,7 @@ but beyond that, to be an ecosystem which inspires a culture of heavy remixing a
 ## Licensing
 
 To support these goals, Plaice employs two separate licenses to different kinds of artifacts: the 
-CErN-OHL-S to all CAD files, and CC-BY-SA to everything else in this repository and its associated exports,
+[CERN-OHL-S](/LICENSE-cern_ohl_s_v2.txt) to all CAD files, and [CC-BY-SA](LICENSE-cc-by-sa-4_0.txt) to everything else in this repository and its associated exports,
 including 3d model files. 
 
 The OHL-S is a "strongly reciprocal" license, meaning that any released CAD files or other
