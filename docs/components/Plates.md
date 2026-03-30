@@ -1,6 +1,6 @@
 # Plates
 
-<img src="/docs/images/plate/plate.jpg" alt="A Plaice Plate" width="256" height="256">
+<img src="/docs/images/plate/plate.jpg" alt="A 2x2 Plaice Plate" width="256" height="256"> <img src="/docs/images/plate/largeplate.webp" alt="An 8x8 Plaice Plate" width="256" height="256">
 
 The single most important Plaice component, plates give the rest of the system a structural base.
 A plate consists of a `7mm` (`1 HU`) rectangular slab covered in an array of [sockets](/docs/design/Sockets.md)
