@@ -1,5 +1,5 @@
 # Plaice Units
-<img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256">
+<img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256"> <img src="/docs/images/stackedplates.webp" alt="Two Plaice plates, stacked" width="256" height="256">
 
 Any modular constuction system is faced with the fundamental problem of defining how the system
 will sit in 3d space, and Plaice is no exception. Systems like [Ikea SKADIS](https://www.ikea.com/us/en/cat/skadis-series-37813/), 
@@ -17,6 +17,7 @@ of a Plaice plate that we intend to focus on. By convention, we take the [socket
 to align with the XY plane when considering this plate-relative reference frame.
 
 ## Grid Units
+<img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256">
 
 Along the XY plane, a Plaice plate is made of repeating square units known as _cells_. Each cell has a socket
 placed squarely in the middle, and when projected onto the XY plane, each cell measures `21 mm x 21 mm`. Due to the centrality
@@ -41,6 +42,7 @@ Such a strategy could be used to integrate Plaice as the "smaller" system relati
 bidirectional integrations would be unwieldy, but at the time of writing, no such unidirectional integrations have been implemented.
 
 ## Height Units
+<img src="/docs/images/stackedplates.webp" alt="Two Plaice plates, stacked" width="256" height="256">
 
 Along the Z axis, a Plaice plate is `7 mm` thick. A length of `7 mm` is known as a **Height Unit** (HU), and it also appears frequently in Plaice
 definitions. This value is identical to a Gridfinity "height unit", though largely by coincidence. From divisibility principles mentioned in the previous section,
