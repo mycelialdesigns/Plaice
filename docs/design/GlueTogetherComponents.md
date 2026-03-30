@@ -1,4 +1,5 @@
 # Glue-together Components
+<img src="/docs/images/glueon.webp" alt="An OpenGrid baseplate glued onto a Plaice clipped plate" width="256" height="256">
 
 In a variety of scenarios, it can make more sense to print a Plaice component out of multiple different parts
 which then get super-glued together than to design or print the Plaice component as a single part. On the design side,
