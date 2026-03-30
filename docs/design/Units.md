@@ -1,4 +1,5 @@
 # Plaice Units
+<img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256">
 
 Any modular constuction system is faced with the fundamental problem of defining how the system
 will sit in 3d space, and Plaice is no exception. Systems like [Ikea SKADIS](https://www.ikea.com/us/en/cat/skadis-series-37813/), 
