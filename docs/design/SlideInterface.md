@@ -33,8 +33,9 @@ be flipped to match orientations, the cognitive load (and hence, time) involved 
 can be reduced. For the slide interface profile, this means ensuring a vertical flip symmetry across a central horizontal axis.
 
 #### Asymptotic Strength Under Plate Stacking
+<img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="64"> <img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="64"> <img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="64"> <img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="64"> </div>
 
-<img src="/docs/images/slideinterface/slideinterface-profile-tesselated.svg" alt="Slide Interface, Tessellated" width="512" height="512">
+<img src="/docs/images/stackedplates.webp" alt="Stacked Plates" width="256" height="256">
 
 There are plenty of situations where a `7mm` thick 3d-printed PLA plates just aren't going to cut it for a given loading regime. 
 In those situations, it's reasonable to want to stack plates on top of each other, and somehow secure them to form a larger composite.
