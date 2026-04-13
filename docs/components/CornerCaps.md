@@ -15,6 +15,12 @@ It is important to ensure that the real slides are not oriented "vertically" to 
 the box is picked up (if clearances are loose). Instead, one of the other two orientations for the real slides
 should be picked.
 
+During assembly, you _will_ encounter interference between the internal chamfers of corner caps belonging to the stub slides
+and their adjacent plates. Don't panic, just continue to push the corner caps through until the plate slightly moves out
+of the way and the cap "snaps" into place. You may need to do this for both stub slides, and you'll also want to check that
+when pushing a stub slide past a slide intrusion on a plate, the chamfer gets pushed all the way through and not just partially
+lodged inside the slide intrusion. Just keep pushing on.
+
 ## Printing Tips
 <img src="/docs/images/cornercap/printablecornercap.webp" alt="A Corner Cap, just after printing" width="256" height="256"> 
 Print corner caps with supports for the sake of the flats on the stub slides.
