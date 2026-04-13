@@ -1,7 +1,5 @@
 # Clearances
-Designing Plaice components to fit together requires careful attention to the nominal clearances between components. We talk here
-about clearances instead of tolerances because the manufacturing tolerance of 3d prints is inherent to the _printer_, not to the
-models that we feed into the slicer. 
+Designing Plaice components to fit together requires careful attention to the nominal clearances between components.
 
 ## Preliminary Definitions
 Clearances describe the size of gaps between two surfaces, and so it's important to have a clear reference to what the surfaces
@@ -22,11 +20,35 @@ to the model geometry to correct for differences from the ideal which would occu
 are all in the form of clearances applied between the idealized geometry and the modeling geometry at different locations throughout the model, and
 so we call them *print correction clearances*. It's important to note that these clearances are meant to be somewhat of a statistical average of the
 clearance biases that they're meant to correct for across _all_ printed Plaice components, which says nothing of the variation, but we can simply
-lump that in with manufacturing tolerances.
+lump that in with other factors which determine our overall manufacturing tolerances.
 
 ### XY Hole Shrinkage Clearance
+When a 3d printer prints a circular arc in the XY plane, it deposits hot plastic centered along the arc which briefly
+flows, then cools and hardens. Consider a simple model of this where the nozzle deposits plastic which falls in a region
+bounded in XY by offsets of the arc, padded to the printing layer height. Also suppose that the volume of plastic deposited
+on either side of the "nominal" arc that the nozzle follows is equal. Then, a direct consequence of these assumptions is that
+the offset for the "interior" arc (smaller diameter) must be _larger_ than the offset for the "exterior" arc (larger diameter).
+
+In other words, 3d-printed holes shrink along XY, with smaller 3d-printed holes systematically shrinking more than larger ones, and more
+generally, any concave geometry along XY will expand inwards, with the amount of expansion dependent on curvature. While this effect
+is not describable purely by a constant offset for _all_ radii of curvature, in practice, in Plaice, the curvatures of surfaces which
+need an XY hole shrinkage clearance applied (mostly just slides) are all pretty similar. We call the clearance value which issues
+this modification to the design geometry over the idealized geometry the _XY Hole Shrinkage Clearance_. 
 
 ### Z Overhang Depression Clearance
+The overall process of 3d printing introduces some systematic errors which can make overhanging geometry depress along the Z axis toward the
+build plate, both from physical causes and from the way that slicers interpret 3d designs. 
+
+The single biggest physical cause has to do with
+the fact that molten plastic will fall _down_ under the influence of gravity, and overhangs will tend to do the same unless cooled rapidly.
+The same is true for _supported_ overhangs, because the support isn't completely solid, and may introduce bottom-surface roughness on removal.
+
+To make matters worse, slicers determine what belongs on each layer "slice" of a model by intersecting the model with abstract planes which
+are set to the height of the _top_ of the layer, not the middle, meaning that the effects of the semi-quantization induced by slicing will
+cause overhanging geometry to shift _downwards_ by about half of a layer-height on average.
+
+We cannot hope to model both factors exactly, but we can compensate by adding a clearance to "push up" any overhangs in the designs. We
+call this applied clearance between the idealized and design geometry the _Z Overhang Depression Clearance_.
 
 ## The Clearance Multiplier
 
@@ -39,6 +61,9 @@ lump that in with manufacturing tolerances.
 
 ### Smooth Slide Fit Clearance
 
-## Interaction with "Tolerances" 
-Manufacturing tolerances are essentially an expression of the allowed variation in certain measured dimensions of a manufactured object,
-typically from a design perspective which is meant to constrain the types of manufacturing processes used on the object. 
+## Tolerances
+We mostly talked here about clearances instead of tolerances because most of the relevant tolerances to Plaice are actually one-sided tolerances
+instead of symmetric tolerances. For example, for two [slides](/docs/design/SlideInterface.md) to fit together with _any_ other slides within
+tolerance, they must have de facto geometry which never crosses the slide _interface_ which their idealized geometry is offset from. To bound the other side,
+for each kind of interface, we do the simplest possible thing and declare that the idealized geometry with the maximum acceptable clearance multiplier is
+the other surface defining the outer limit of the one-sided tolerance. 
