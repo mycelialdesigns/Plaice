@@ -8,7 +8,7 @@ which consists of 2d profiles in CAD expressing an idealized meeting-curve of tw
 represents the geometry expressed in 3d CAD and/or in exported .stl files, and "*de facto*" geometry which is the physical geometry
 of real components after printing. 
 
-## Print Correction Clearances
+## Print Bias Correction Clearances
 Due to artifacts of the 3d printing process, de facto geometry will never exactly match model geometry. However, we have control
 over the model geometry, which means that if we have systematic biases in how de facto geometry deviates from how we want it
 to be, we can simply adjust the model geometry to compensate for those biases as best we can. The de facto geometry as we'd like it to
@@ -51,15 +51,40 @@ We cannot hope to model both factors exactly, but we can compensate by adding a 
 call this applied clearance between the idealized and design geometry the _Z Overhang Depression Clearance_.
 
 ## The Clearance Multiplier
+Print bias correction clearances aren't the only clearances we need to care about in the process of preparing Plaice components for printing.
+Every 3d printer has its own quirks, and even when fully calibrated and printing geometry which corrects systematic printer biases,
+individual 3d printers will still exhibit small variations in their output from print-to-print. 
+Plaice components are designed to be printable by most 3d printers, and consequently, it's important that
+we have some kind of mechanism for accommodating these dimensional variations. We do this by introducing additional clearances between mating parts
+in a systematic way dependent upon how the parts are meant to mate. 
 
+Plaice components like plates are highly dependent upon tight de facto clearances to minimize deflection in assemblies.
+Simply choosing _one_ set of clearances intended for all printers would require us to select the _largest_ such clearance, which is
+therefore unacceptable for our use-case. To resolve this problem, Plaice has a global _clearance multiplier_ which multiplies all non-print-bias-correcting
+clearance values applied to design geometry. This multiplier is meant to be interpreted as approximately bounded below
+by `1.0` (something intended for printers in the top 1% of print quality) and above by `2.0` (something which works for ~95% of all printers in the wild,
+though it may wind up being a loose fit). 
 
 ## Clearance Levels
+For .stl export of Plaice components, having a continuum of possible clearance multiplier values is untenable. To resolve this problem, we instead define
+three clearance _levels_ for different values of the clearance multiplier, termed _Tight_ for `1.0`, _Standard_ for `1.5`, and _Loose_ for `2.0`. 
+
+## Clearance Types
+The "base" or "fundamental" clearance values which the clearance multiplier multiplies are assigned based on the intent behind mating geometry,
+which falls into a small number of discrete categories we call "Clearance Types".
 
 ### Contact Fit Clearance
+Applied to parts which are meant to assemble and _contact_ each other without substantial movement. Applicable to mating surface pairs where
+assembly involves moving the surfaces toward each other, but also to mating surface pairs where the mating surface patches are small and/or compliant.
+This is the tightest clearance type.
 
 ### Snug Slide Fit Clearance
+Applied to mating surface pairs which have substantial contact surface area, and are meant to "slide" against each other, but only during
+assembly.
 
 ### Smooth Slide Fit Clearance
+Applied to mating surface pairs which have substantial contact surface area, but where the sliding between parts is meant to occur frequently
+after assembly. This is the loosest clearance type.
 
 ## Tolerances
 We mostly talked here about clearances instead of tolerances because most of the relevant tolerances to Plaice are actually one-sided tolerances
