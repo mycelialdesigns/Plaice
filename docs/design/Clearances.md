@@ -1,4 +1,6 @@
 # Clearances
+<img src="/docs/images/slideinterface/clearancedxyslide.png" alt="Slide Interface, Clearanced For XY Printing" width="256" height="256"> <img src="/docs/images/connectorinterface/connectorinterface.png" alt="Connector Interface, Showing Tolerances" width="256" height="256">
+
 Designing Plaice components to fit together requires careful attention to the nominal clearances between components.
 
 ## Preliminary Definitions
@@ -23,6 +25,7 @@ clearance biases that they're meant to correct for across _all_ printed Plaice c
 lump that in with other factors which determine our overall manufacturing tolerances.
 
 ### XY Hole Shrinkage Clearance
+<img src="/docs/images/slideinterface/clearancedxyslide.png" alt="Slide Interface, Clearanced For XY Printing" width="256" height="256">
 When a 3d printer prints a circular arc in the XY plane, it deposits hot plastic centered along the arc which briefly
 flows, then cools and hardens. Consider a simple model of this where the nozzle deposits plastic which falls in a region
 bounded in XY by offsets of the arc, padded to the printing layer height. Also suppose that the volume of plastic deposited
@@ -36,6 +39,7 @@ need an XY hole shrinkage clearance applied (mostly just slides) are all pretty 
 this modification to the design geometry over the idealized geometry the _XY Hole Shrinkage Clearance_. 
 
 ### Z Overhang Depression Clearance
+<img src="/docs/images/slideinterface/clearancedslide.png" alt="Slide Interface, Clearanced For Z Printing" width="256" height="256">
 The overall process of 3d printing introduces some systematic errors which can make overhanging geometry depress along the Z axis toward the
 build plate, both from physical causes and from the way that slicers interpret 3d designs. 
 
