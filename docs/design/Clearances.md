@@ -35,7 +35,7 @@ the offset for the "interior" arc (smaller diameter) must be _larger_ than the o
 In other words, 3d-printed holes shrink along XY, with smaller 3d-printed holes systematically shrinking more than larger ones, and more
 generally, any concave geometry along XY will expand inwards, with the amount of expansion dependent on curvature. While this effect
 is not describable purely by a constant offset for _all_ radii of curvature, in practice, in Plaice, the curvatures of surfaces which
-need an XY hole shrinkage clearance applied (mostly just slides) are all pretty similar. We call the clearance value which issues
+need an XY hole shrinkage clearance applied (mostly just [slides](/docs/design/SlideInterface.md)) are all pretty similar. We call the clearance value which issues
 this modification to the design geometry over the idealized geometry the _XY Hole Shrinkage Clearance_. 
 
 ### Z Overhang Depression Clearance
@@ -62,7 +62,7 @@ Plaice components are designed to be printable by most 3d printers, and conseque
 we have some kind of mechanism for accommodating these dimensional variations. We do this by introducing additional clearances between mating parts
 in a systematic way dependent upon how the parts are meant to mate. 
 
-Plaice components like plates are highly dependent upon tight de facto clearances to minimize deflection in assemblies.
+Plaice components like [plates](/docs/components/Plates.md) are highly dependent upon tight de facto clearances to minimize deflection in assemblies.
 Simply choosing _one_ set of clearances intended for all printers would require us to select the _largest_ such clearance, which is
 therefore unacceptable for our use-case. To resolve this problem, Plaice has a global _clearance multiplier_ which multiplies all non-print-bias-correcting
 clearance values applied to design geometry. This multiplier is meant to be interpreted as approximately bounded below
