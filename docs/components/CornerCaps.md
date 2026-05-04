@@ -24,3 +24,9 @@ lodged inside the slide intrusion. Just keep pushing on.
 ## Printing Tips
 <img src="/docs/images/cornercap/printablecornercap.webp" alt="A Corner Cap, just after printing" width="256" height="256"> 
 Print corner caps with supports for the sake of the flats on the stub slides.
+
+## Chirality
+
+Corner caps are _chiral_ Plaice components, which means that them and their mirror images are not the same. In practice,
+virtually all Plaice assmeblies using corner caps will need both the default corner-cap and its mirror image (mirrored in the slicer)
+in equal proportions. See, e.g: [the recipe for stacking boxes](/docs/recipes/StackingBoxes.md)
