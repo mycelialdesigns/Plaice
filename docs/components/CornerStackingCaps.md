@@ -25,3 +25,9 @@ is [`1 CU`](/docs/design/Units.md) in height, and should be assumed to take up a
 <img src="/docs/images/thincornerstackinglip/thincornerstackinglipsupports.webp" alt="A Corner Stacking Cap, Thin Variant, just after printing" width="256" height="256"> <img src="/docs/images/thickcornerstackinglip/thickcornerstackinglipsupports.webp" alt="A Corner Stacking Cap, Thick Variant, just after printing" width="256" height="256">
 
 Print both variants with supports for the sake of the bottom flats of the stub slides.
+
+## Chirality
+
+Both variants of corner stacking caps are chiral, meaning that they are not equivalent to their mirror images. In practice, this means that when assembling Plaice boxes,
+depending on the orientation of the plates making up the walls of the box, either with protruding slides oriented counterclockwise or clockwise, you will need to print
+regular-variant corner stacking caps or their mirrored variants, respectively. See [the recipe for stacking boxes](/docs/recipes/StackingBoxes.md) for an example. 
