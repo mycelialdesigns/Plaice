@@ -37,9 +37,10 @@ So-called "thru-access" bolted beams depend upon being able to drop in a M2 bolt
 a central channel _and tightening it_ before inserting a M2 nut into the nut channel during assembly,
 and reversing these steps during disassembly. While this does solve the length problem for bolts,
 it makes the problem reappear somewhat in the length of M2 hex keys required to access the bolt head.
-It's somewhat annoying for the required order-of-operations, and also slightly erodes the structural
+It can be somewhat annoying for the required order-of-operations, and also slightly erodes the structural
 integrity of connections to the captive nut, because the contacting surface area had to be reduced
-to accommodate a drop-in bolt channel.
+to accommodate a drop-in bolt channel. That said, for short beam segments, it may be the only option
+available, other than using a thru-beam. 
 
 ### Hex key access bolted beams
 
@@ -48,7 +49,7 @@ to accommodate a drop-in bolt channel.
 Hex-key access bolted beams carve a channel along the interior corner of the beam length which allows both
 a M2 bolt and an M2 hex key to be inserted into the channel, and the M2 hex key to be turned at 75 degree
 increments to eventually tighten or loosen a bolt. Unlike the other solutions, this type of beam
-allows for large lengths, but also pretty much _requires_ a beam which is longer than an M2 hex key.
+allows for large lengths, but also requires a beam which is longer than the short arm of an M2 hex key.
 
 ## Printing Tips
 
