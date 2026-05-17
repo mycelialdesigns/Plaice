@@ -1,4 +1,6 @@
 # Recipe: Shelves
+<img src="/docs/images/shelfconstruction/step10.webp" alt="Step 10 Visual" width="256"> <img src="/docs/images/shelfconstruction/step18b.webp" alt="Step 18 Visual 2" width="256"> <img src="/docs/images/shelfconstruction/step22.webp" alt="Step 22 Visual" width="256"> 
+
 
 In this recipe, we'll make shelves which are [`18 HU`](/docs/design/Units.md) tall with a `12 CU x 8 CU` surface,
 suitable for small desk or kitchen organization tasks (e.g: extra storage for mugs in cabinets). The steps in this
