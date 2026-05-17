@@ -18,6 +18,9 @@ and how to iterate the construction steps of this recipe to build multi-tier she
 - 1 `8 CU x 8 CU` Nubbed Cover\*
 - 2 `2 CU x 4 CU` Nubbed Covers\*
 - Optional: 28 M2 Nuts + 16 M2 10mm Bolts + 12 M2 6mm Bolts
+### Stacked Variant
+- 4 [Thru-Nubs](/docs/components/ThruNubs.md) for every tier above the first
+- Optional: 1 M2 16mm bolt for every thru-nub. 
 
 \*: Any same-size composite of smaller components will also work.
 
@@ -92,3 +95,99 @@ Repeat the previous three steps for each leg of the shelf.
 <img src="/docs/images/shelfconstruction/step10.webp" alt="Step 10 Visual" width="256">
 
 Finish (Plugged + Bolts configuration)
+
+With the bolts in place, the legs are no longer at risk of falling off when the weight
+on top of the shelf is increased, but if you look closely in the picture, you might
+notice that the surface of the shelf sags somewhat about the seam where the plates
+making up the surface are joined via slides. To resolve this issue, and make it
+so that the entire surface of the shelf behaves homogenously, follow along with
+the next steps, which will show how to affix covers to the assembly.
+
+## Step 11 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step11.webp" alt="Step 11 Visual" width="256">
+
+Revert all the way back to step 2. Prepare one of the `4 x 8 CU` clipped covers by inserting
+M2 nuts into the captive nut channels. You do not need to insert nuts into _every_ captive
+nut channel, simply enough to later engage with associated bolts for the beams, one for every
+corner of the clipped cover, and one for every position which will mate with the corner
+bolts of a nubbed cover on the bottom of the plate. Don't worry about getting
+this perfect the first time, but ensure that you stay on steps 11 and 12 before proceeding
+to minimize wasted effort. 
+
+## Step 12 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step12a.webp" alt="Step 12 Visual 1" width="256"> <img src="/docs/images/shelfconstruction/step12b.webp" alt="Step 12 Visual 2" width="256">
+
+Repeat step 11 for all clipped covers demanded for this recipe. While doing this, it helps
+to flip the assembly upside down and test-position nubbed covers over the assembly to
+determine where the captive M2 nuts should go. Sample pattern shown in picture.
+
+## Step 13 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step13.webp" alt="Step 13 Visual" width="256">
+
+Position the nubbed covers as shown, and snap them into place.
+
+## Step 14 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step14.webp" alt="Step 14 Visual" width="256">
+
+Take the 10mm M2 bolts and screw them into every corner of every clipped and nubbed cover.
+If you lose track of where to place them, looking carefully at each hole can help, since
+at certain angles the internal threads of the nuts placed in earlier steps may still be
+visible. 
+
+## Step 15 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step15.webp" alt="Step 15 Visual" width="256">
+
+Snap in a beam at one of the corners, and attach the three inner 10mm M2 bolts.
+
+## Step 16 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step16.webp" alt="Step 16 Visual" width="256">
+
+Insert one more 10mm M2 bolt into the internal channel of the beam, and lightly
+tighten using a hex key.
+
+## Step 17 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step17.webp" alt="Step 17 Visual" width="256">
+
+Repeat the previous two steps for the remaining three beams.
+
+## Step 18 (Covered, Bolts)
+<img src="/docs/images/shelfconstruction/step18a.webp" alt="Step 18 Visual 1" width="256"> <img src="/docs/images/shelfconstruction/step18b.webp" alt="Step 18 Visual 2" width="256">
+
+Papillon for scale.
+
+Finish (Covered + Bolts Configuration)
+
+Now our single-tier shelf is looking pretty sturdy! However, a single-tier shelf is just...
+a table. What if we want multiple shelf tiers? Well, doing so is fairly simple -- read on!
+
+## Step 19 (Stacking)
+<img src="/docs/images/shelfconstruction/step19.webp" alt="Step 19 Visual" width="256">
+
+To start, assemble multiple shelving tiers by following one or more of the journeys above. 
+In our case, we have a plugged shelf which we'll place on the bottom, and a covered
+shelf which we'll be placing as the top tier. It's possible to have either configuration,
+but in our case, we would need to print different-size covers if we wanted the covered
+shelf on the bottom.
+
+Remove the plugs at the corners of the bottom-tier shelf. (If doing this with a covered
+shelf instead, you will need to change the pattern of clipped covers to accommodate
+`1 CU x 1 CU` gaps at each of the corners.)
+
+## Step 20 (Stacking)
+<img src="/docs/images/shelfconstruction/step20.webp" alt="Step 20 Visual" width="256">
+
+Snap a thru-nub into one of the corners of the bottom tier's surface.
+
+## Step 21 (Stacking)
+<img src="/docs/images/shelfconstruction/step21.webp" alt="Step 21 Visual" width="256">
+
+Slide an M2 bolt into the nut channel of the corresponding beam of the top tier.
+Repeat this step and the previous one for all four corners.
+
+## Step 22 (Stacking)
+<img src="/docs/images/shelfconstruction/step22.webp" alt="Step 22 Visual" width="256">
+
+Snap the four beams of the top tier onto the thru-nubs of the bottom tier, and secure
+with four 16mm M2 bolts. Iterate the stacking steps if you want to add more tiers.
+
+Finish
