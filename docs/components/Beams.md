@@ -1,6 +1,6 @@
 # Beams
 
-<img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Thru-Access Beam" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
+<img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 Plaice beams are components which are commonly used as "legs" or "columns" of free-standing shelves.
 They consist of a [`1 CU x 1 CU`](/docs/design/Units.md) base with a [clipped connector](/docs/design/ClipInterface.md)
@@ -17,39 +17,25 @@ of the top plate.
 
 ## M2 Bolt Integration Variants
 
-Given that beams have a similar challenge to [thru-nubs](/docs/components/ThruNub.md) in that at least one of their nubbed connectors
-doesn't have immediately apparent access to its "back side", a similar solution (just putting a hole
-for M2 bolts to pass through) would seem to work, at least in some situations. (That variant
-of a beam is called a "thru beam")
+Beams have a similar challenge to [thru-nubs](/docs/components/ThruNub.md) in that at least one of their nubbed connectors
+doesn't have immediately apparent access to its "back side". However, for long beams, a similar solution would not apply.
+Consequently, in Plaice, there are two different beam variants:
 
-
+### Thru-Beams
 <img src="/docs/images/beams/thrubeam.jpg" alt="A Thru Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
-However, beams can be fairly long, and it's pretty hard to find (or even to want) 
-excessively long M2 bolts. Consequently, there are two more beam variants which try to
-give access to the head of an inserted M2 bolt in two different ways.
+When the desired length of beam is short enough that standard-issue M2 bolts can easily pass through the whole length and interface with
+other components in a Plaice assembly, you might consider using a thru-beam. Generally speaking, that means lengths of
+`6 HU` and lower.
 
-### Thru-access bolted beams
-
-<img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Thru-Access Beam" width="256" height="256"> <img src="/docs/images/beams/thruaccessbeamside.jpg" alt="A Thru-Access Beam, Side View" width="256" height="256">
-
-So-called "thru-access" bolted beams depend upon being able to drop in a M2 bolt down
-a central channel _and tightening it_ before inserting a M2 nut into the nut channel during assembly,
-and reversing these steps during disassembly. While this does solve the length problem for bolts,
-it makes the problem reappear somewhat in the length of M2 hex keys required to access the bolt head.
-It can be somewhat annoying for the required order-of-operations, and also slightly erodes the structural
-integrity of connections to the captive nut, because the contacting surface area had to be reduced
-to accommodate a drop-in bolt channel. That said, for short beam segments, it may be the only option
-available, other than using a thru-beam. 
-
-### Hex key access bolted beams
+### Hex-Key-Access-Beams
 
 <img src="/docs/images/beams/keyaccessbeam.jpg" alt="A Key-Access Beam" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> 
 
 Hex-key access bolted beams carve a channel along the interior corner of the beam length which allows both
 a M2 bolt and an M2 hex key to be inserted into the channel, and the M2 hex key to be turned at 75 degree
 increments to eventually tighten or loosen a bolt. Unlike the other solutions, this type of beam
-allows for large lengths, but also requires a beam which is longer than the short arm of an M2 hex key.
+allows for large lengths, but also requires a beam which is at least `6 HU` in length.
 
 ## Printing Tips
 
