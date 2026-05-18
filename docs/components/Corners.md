@@ -9,7 +9,7 @@ cell boundary of the first plate.)
 
 Unlike crosses and tees, corners have a chamfer on their exterior, which is `.75 HU` in length. This length is chosen to match the chamfer
 on the inner portion of the corner, both for aesthetic purposes and because it is the longest possible chamfer length which is both
-still a multiple of `.25 HU` (the smallest employed by the system), and leaves at least _some_ completely horizonta overlap with [stacking lips](/doc/components/StackingLips.md). 
+still a multiple of `.25 HU` (the smallest employed by the system), and leaves at least _some_ completely horizontal overlap with [stacking lips](/doc/components/StackingLips.md). 
 
 ## Printability modification
 
