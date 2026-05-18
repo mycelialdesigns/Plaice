@@ -66,12 +66,13 @@ Plaice components like [plates](/docs/components/Plates.md) are highly dependent
 Simply choosing _one_ set of clearances intended for all printers would require us to select the _largest_ such clearance, which is
 therefore unacceptable for our use-case. To resolve this problem, Plaice has a global _clearance multiplier_ which multiplies all non-print-bias-correcting
 clearance values applied to design geometry. This multiplier is meant to be interpreted as approximately bounded below
-by `1.0` (something intended for printers in the top 1% of print quality) and above by `2.0` (something which works for ~95% of all printers in the wild,
+by `1.0` (something intended for printers in the top 1% of print quality) and above by `1.75` (something which works for ~95% of all printers in the wild,
 though it may wind up being a loose fit). 
 
 ## Clearance Levels
 For .stl export of Plaice components, having a continuum of possible clearance multiplier values is untenable. To resolve this problem, we instead define
-three clearance _levels_ for different values of the clearance multiplier, termed _Tight_ for `1.0`, _Standard_ for `1.5`, and _Loose_ for `2.0`. 
+four clearance _levels_ for different values of the clearance multiplier, termed _Tight_ for `1.0`, _Standard_ for `1.25`, _Relaxed_ for `1.5`, and
+_Loose_ for `1.75`. 
 
 ## Clearance Types
 The "base" or "fundamental" clearance values which the clearance multiplier multiplies are assigned based on the intent behind mating geometry,
