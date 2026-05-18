@@ -35,7 +35,7 @@ other components in a Plaice assembly, you might consider using a thru-beam. Gen
 Hex-key access bolted beams carve a channel along the interior corner of the beam length which allows both
 a M2 bolt and an M2 hex key to be inserted into the channel, and the M2 hex key to be turned at 75 degree
 increments to eventually tighten or loosen a bolt. Unlike the other solutions, this type of beam
-allows for large lengths, but also requires a beam which is at least `6 HU` in length.
+allows for large lengths, but also requires a beam which is at least `5 HU` in length.
 
 ## Printing Tips
 
