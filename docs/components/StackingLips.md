@@ -9,3 +9,4 @@ Stacking lips may be used to construct stackable boxes out of Plaice components,
 for large stacking boxes by themselves, since the deflection of Plaice [plates](/docs/components/Plates.md) making up the walls may be too high
 for stacked boxes to seat properly. Consequently, for larger boxes, it is recommended to use the "thick" variant
 of [corner stacking caps](/docs/components/CornerStackingCaps.md) to ensure that at least the corners of boxes are always supported.
+See the [stacking boxes recipe](/docs/recipes/StackingBoxes.md) for more information.
