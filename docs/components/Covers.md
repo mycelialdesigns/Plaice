@@ -3,7 +3,7 @@
 
 Clipped and nubbed covers are Plaice components which go one step further from [plugs](/docs/components/Plugs.md), and add a thin `1.7 mm` (approximately [`.25 HU`](/docs/design/Units.md)) slab of material over the top of a bunch of plugs.
 They may be used to conceal or prettify Plaice [plates](/docs/components/Plates.md), to create colored patterns, or even as structural reinforcement to "correct" deflection between
-two [slide-connected](/docs/design/SlideInterface.md) plates. 
+two [slide-connected](/docs/design/SlideInterface.md) plates. (For an example of deflection correction, see the [recipe for shelves](/docs/recipes/Shelves.md).)
 
 ## Clipped
 <img src="/docs/images/covers/clippedcovertop.jpg" alt="A Clipped Cover, Top View" width="256" height="256"> <img src="/docs/images/covers/clippedcoverbottom.jpg" alt="A Clipped Cover, Bottom View" width="256" height="256"> 
