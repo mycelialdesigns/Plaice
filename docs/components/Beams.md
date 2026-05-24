@@ -39,13 +39,20 @@ allows for large lengths, but also requires a beam which is at least `5 HU` in l
 
 ## Printing Tips
 
-<img src="/docs/images/beams/beambottomprintable.webp" alt="Thru-beam right after printing" width="256" height="256"> <img src="/docs/images/beams/taperedbeambottomsupports.webp" alt="Tapered beam right after printing" width="256" height="256">
+<img src="/docs/images/beams/keyaccessbeamsupports.webp" alt="A Key-Access Beam, Printed With Supports" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeamsupportsbottom.webp" alt="A Key-Access Beam, Printed With Supports, Bottom View" width="256" height="256">
 
 As is the case with all other Plaice components with sensitive geometry on both sides of any hypothetical print orientation along Z, when printing a beam, the nubbed connectors should be oriented downwards,
 so that their printability modification can be applied. Additionally, since the top of the beam (bottom in print orientation) has a flat of cell-unit-multiple sizing, support structures should be added to
 support that flat at the bottom of the print. None of the other surfaces on the underside of the print, like the nubbed connectors or their chamfers, should have generated supports -- it wastes filament, time, and just makes them more difficult to remove.
 
-<img src="/docs/images/beams/keyaccessbeamsupports.webp" alt="Key-access beam after printing" width="256" height="256"> <img src="/docs/images/beams/keyaccessbeambottomsupports.webp" alt="Key-access beam after printing, bottom view" width="256" height="256">
-
-That said, the M2 nut channel near the top of the print should not need any supports, so feel free to add support blocking modifiers there. Finally, in the special
+That said, the M2 nut channel near the top of the print should not need any supports, so feel free to add support blocking modifiers there. Finally, in the
 case of the hex-key-access bolted beam, supports should be generated for the void where the hex key is inserted. 
+
+<img src="/docs/images/beams/beamsupportremovalstep1.webp" alt="Beam Bottom Support Removal, Step 1" width="256" height="256">
+
+When removing supports from the bottom, first remove the slicer-generated support structures and the mouse-ears on the nubs to yield something like the picture above.
+Then, break the bridges between the nubbed connectors' central islands using a needle-nosed pliers.
+
+<img src="/docs/images/beams/beamsupoprtremovalstep2.webp" alt="Beam Bottom Support Removal, Step 2" width="256" height="256"> <img src="/docs/images/beams/beamsupportremovalstep3.webp" alt="Beam Bottom Support Removal, Step 3" width="256" height="256">
+
+From this state, removal of the key access-slot supports and a poke through the corner hole with a screwdriver or Allen key will result in something that looks like the pictures at the top of this article.
