@@ -15,6 +15,16 @@ Or another Plaice [plate](/docs/components/Plates.md) can be stacked on top of t
 
 # Printing
 
-<img src="/docs/images/thrunubs/thrunubprintability.webp" alt="A Thru-nub right after printing" width="256" height="256"> <img src="/docs/images/thrunubs/thrunubprintabilitybottom.webp" alt="A Thru-nub right after printing, Bottom View" width="256" height="256"> 
+<img src="/docs/images/thrunubs/thrunubtopwithsupports.webp" alt="A Thru-nub right after printing" width="256"> <img src="/docs/images/thrunubs/thrunubbottomwithsupports.webp" alt="A Thru-nub right after printing, Bottom View" width="256" height="256"> 
 
-The "printable" modification of thru-nubs may be printed without supports. 
+The "printable" modification of thru-nubs may be printed without supports or a brim, because it adds substantial first layer surface-area
+via mouse-ears and bridges which connect the nubbed connector's central island to the corners.
+
+<img src="/docs/images/thrunubs/thrunubsupportremovalstep1.webp" alt="Thru-Nub support removal, step 1" width="256">
+
+To remove the supports, first remove the mouse-ears to yield something like the above picture. Then, break the bridges
+between the islands on the nubbed connector using a needle-nose pliers.
+
+<img src="/docs/images/thrunubs/thrunubsupportremovalstep2.webp" alt="Thru-Nub support removal, step 2" width="256"> <img src="/docs/images/thrunubs/thrunubsupportremovalstep3.webp" alt="Thru-Nub support removal, step 3" width="256">
+
+Once completed, the result will look like the pictures at the beginning of this article.
