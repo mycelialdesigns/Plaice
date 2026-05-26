@@ -1,6 +1,6 @@
 # Bolt-On Components
 
-<img src="/docs/images/gridfinityopengridconstruction/step8.webp" alt="A gridfinity bolt-on secured to a nubbed backing" width="256" height="256">
+<img src="/docs/images/gridfinityopengridconstruction/step8.webp" alt="A gridfinity bolt-on in the process of being secured to a clipped backing" width="256" height="256">
 
 In a variety of scenarios, it can make more sense to print a Plaice component out of multiple different parts
 which then get bolted together than to design or print the Plaice component as a single part. On the design side,
