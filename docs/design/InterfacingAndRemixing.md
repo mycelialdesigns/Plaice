@@ -27,11 +27,11 @@ an unbroken chain of attribution. Both are crucial to the kind of ecosystem that
 There are multiple different ways to create new components for Plaice or to remix existing components,
 each with their own tradeoffs.
 
-### Lowest Friction, Lowest Customizability: Glue-Together Parts
+### Lowest Friction, Lowest Customizability: Bolt-On Parts
 
-By far the easiest and most-preferred way to integrate with Plaice is to simply depend upon gluing printed parts on to
-a Plaice [clipped or nubbed cover](/docs/components/Covers.md), as described in more detail on the [dedicated page](/docs/design/GlueTogetherComponents.md).
-While this is incredibly low-friction for the designer, and is completely agnostic to choice
+By far the easiest and most-preferred way to integrate with Plaice is to simply depend upon bolting printed parts on to
+a Plaice [clipped or nubbed backing](/docs/components/Backings.md), as described in more detail on the [dedicated page](/docs/design/BoltOnComponents.md).
+While this is low-friction for the designer, and is completely agnostic to choice
 of technoogies, it only generally applies to components which only seek to integrate with the
 connector-and-socket portion of Plaice. Anything else will need to use one of the two other methods.
 
