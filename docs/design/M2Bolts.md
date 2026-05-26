@@ -1,10 +1,20 @@
 # M2 Bolts
+<img src="/docs/images/shelfconstruction/step15.webp" alt="Nubbed covers secured on the bottom of a shelving unit" width="256" height="256">
+
+Plaice largely avoids the use of embedded hardware for the sake of rapid prototyping via the [clip](/docs/design/ClipInterface.md)
+and [slide](/docs/design/SlideInterface.md) interfaces, but when it comes time to "cement" a design for a household organizer,
+it's often much more advantageous to incorporate hardware to improve the strength of assemblies. (For a worked example of this,
+see e.g: the [recipe for stacking shelves](/docs/recipes/Shelves.md)). Additionally, Plaice leverages hardware in
+situations where printing a single part could be suboptimal (for various reasons) in [bolt-on components](/docs/components/BoltOnComponents.md).
 
 ## Required Lengths
+Considering the variety of scenarios in which M2 hardware is employed in Plaice, the following is a handy guide
+to what lengths of M2 bolts are required for various scenarios. It's strongly recommended that you buy a kit
+of M2 bolts which at least includes `4 mm`, `6 mm`, `10 mm`, `12 mm`, and `16 mm` lengths.
 
 ### Backings onto Bolt-ons
 
-To use bolt-on components (TODO: link) in the most straightforward way, where they
+To use bolt-on components in the most straightforward way, where they
 are simply bolted on to a Plaice [backing](/docs/components/Backings.md) which provides
 [connectors](/docs/components/ClipInterface.md), M2 nuts must be slid into the backing
 and then the following lengths of M2 bolts inserted from the bolt-on side:
