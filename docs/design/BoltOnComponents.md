@@ -5,12 +5,14 @@
 In a variety of scenarios, it can make more sense to print a Plaice component out of multiple different parts
 which then get bolted together than to design or print the Plaice component as a single part. On the design side,
 for example, a maker looking to [integrate](/docs/design/InterfacingAndRemixing.md) with the system may be using direct 3d modeling and find the prospect of providing
-pieces with multiple different levels of clearances to be daunting. For another consideration, when printing the required support geometry for a unified
+pieces with multiple different levels of clearances to be daunting. Alternatively, when printing, the required support geometry for a unified
 part could require awkwardly-placed or hard-to-remove supports. 
 
 Plaice encourages the use of bolt-on components for these scenarios when the component in question needs an array of
 clipped or nubbed [connectors](/docs/design/ClipInterface.md), which are provided via [backings](/docs/components/Backings.md).
-The bolt-on component may then be attached to the backing using [M2 hardware](/docs/design/M2Bolts.md).
+The bolt-on component may then be attached to the backing using [M2 hardware](/docs/design/M2Bolts.md). Multiple built-in components in Plaice adopt this pattern, e.g: 
+[Gridfinity integration components](/docs/components/GridfinityIntegration.md), [OpenGrid integration components](/docs/components/OpenGridIntegration.md),
+and [slide/glide bolt-ons](/docs/components/SlideAndGlideBoltOns.md).
 
 ## Design
 
