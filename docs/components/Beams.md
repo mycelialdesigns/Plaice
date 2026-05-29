@@ -24,7 +24,7 @@ Consequently, in Plaice, there are two different beam variants:
 ### Thru-Beams
 <img src="/docs/images/beams/thrubeam.jpg" alt="A Thru Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
-When the desired length of beam is short enough that standard-issue M2 bolts can easily pass through the whole length and interface with
+When the desired length of beam is short enough that standard-issue [M2 bolts](/docs/design/M2Bolts.md) can easily pass through the whole length and interface with
 other components in a Plaice assembly, you might consider using a thru-beam. Generally speaking, that means lengths of
 `6 HU` and lower.
 
