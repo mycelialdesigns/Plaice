@@ -1,5 +1,8 @@
 # Recipes Index
 
+## [Clearance Calibration](/docs/recipes/ClearanceCalibration.md)
+<img src="/docs/images/clearancecalibration/platefit.webp" alt="Two plates slid together" width="256">
+
 ## [Gridfinity + OpenGrid Desk Organizer](/docs/recipes/GridfinityOpenGrid.md)
 <img src="/docs/images/gridfinityopengridconstruction/final.webp" alt="Gridfinity+OpenGrid Organizer" width="256">
 
