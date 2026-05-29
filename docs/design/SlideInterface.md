@@ -64,37 +64,6 @@ criterion and use the (max of the) maximum principal stress as a proxy for how c
 
 ## Clearances and Manufacturing Notes
 
-Before applying any printer bias corrections, all protruding and intruding slide profiles are curves at uniform offsets
-from the slide interface. The clearance for each profile from the interface curve is always half of the intended clearance
-between the protruding/intruding profile pair. Generally speaking, Plaice uses only two different values for such
-clearances, depending on the intended functionality for the slides: A "snug" slide fit ("slide"), a transition fit which
-semantically expresses the ability to slide the two halves together, possibly with some effort, but ideally nothing
-which would exceed what is possible with the user's bare hands, and a "smooth" slide fit ("glide"), a clearance fit
-which expresses the ability to (almost-) freely move the two halves relative to each other along their degree of freedom.
-
-However, the CAD for the slide profiles is not quite as simple as the previous description, because 3d printers have
-systemic biases in how printed parts tend to differ from what appears in CAD, and these biases vary substantially
-with print orientation. Along the Z-axis, surface roughness from removed supports, sagging overhangs, and layer quantization
-all have an effect on the end result. Along the XY-plane, internal holes tend to be systematically smaller than
-in CAD, assuming common default slicer settings. 
-
-While all this sounds (and can be!) complex, the corrections that
-Plaice applies to combat them are relatively simple constant-factor ones: an "overhang bias" factor, and a "hole shrinkage" factor.
-Generally speaking, slide profiles in Plaice only occur aligned with one of the XY, YZ, or XZ planes, and we can generally
-assume that printer biases applied to the YZ and XZ planes will be more or less the same. As a result, we have _two_ different
-adjustments to the slide interface:
-
-"slideinterface" (XZ, YZ planes)
-
-(TODO: include annotated pictures!)
-
-"xyslideinterface" (XY plane)
-
-(TODO: include annotated pictures!)
-
-As a direct consequence, the CAD files which make up Plaice have to take print orientation into careful consideration, since
-the relevant files to reference for slides will heavily depend on it. While this adds complexity for designers, the corrections
-are worthwhile to allow for tighter tolerances (and consequently, less potential deflection between parts in a Plaice assembly.)
-
-When a slide is part of a Plaice component, care must also be taken to ensure that there's enough clearance for a plate connected
-via the slide to be able to slide freely, which may require applying clearances to extra surfaces. This happens in (TODO: cite)
+The above is not enough to completely determine what the CAD looks like for protruding and intruding slides, because at a minimum,
+for the slides to fit together, there needs to be some amount of clearance between them. Additionally, process-specific (3d printing)
+biases need to be corrected for. See [the dedicated design page on clearances](/docs/design/Clearances.md). 
