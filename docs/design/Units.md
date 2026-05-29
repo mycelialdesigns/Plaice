@@ -1,4 +1,4 @@
-# Plaice Units
+# Units
 <img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256"> <img src="/docs/images/stackedplates.webp" alt="Two Plaice plates, stacked" width="256" height="256">
 
 Any modular constuction system is faced with the fundamental problem of defining how the system
@@ -6,7 +6,7 @@ will sit in 3d space, and Plaice is no exception. Systems like [Ikea SKADIS](htt
 [HSW](https://www.printables.com/model/152592-honeycomb-storage-wall), and [OpenGrid](https://www.opengrid.world/) are
 fundamentally two-dimensional mounting systems, which is a sub-system of Plaice, but the system
 overall has more similarities with three-dimensional grid-based systems like [Gridfinity](https://gridfinity.xyz/) and `8 mm`
-stud systems ([MegaBloks](https://themegabloks.com/), [LEGO](https://www.lego.com/). 
+stud systems ([MegaBloks](https://themegabloks.com/), [LEGO](https://www.lego.com/)). 
 Unlike those systems, Plaice [plates](/docs/components/Plates.md) may occur oriented parallel
 to any axis-aligned plane -- there is no "preferred" orientation for components of the system
 (like how Gridfinity bins are always oriented "right-side-up"), even if there is a direction
