@@ -1,7 +1,10 @@
 # Components Index
 
+## [Backings](/docs/components/Backings.md)
+<img src="/docs/images/backings/backings.webp" alt="Clipped and Nubbed Backings" width="256">
+
 ## [Beams](/docs/components/Beams.md)
-<img src="/docs/images/beams/thruaccessbeam.jpg" alt="A Beam" width="256" height="256">
+<img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 ## [Corner Caps](/docs/components/CornerCaps.md)
 <img src="/docs/images/cornercap/cornercap.jpg" alt="A Corner Cap" width="256" height="256">
@@ -19,13 +22,13 @@
 <img src="/docs/images/crossesandtees/cross.jpg" alt="Crosses, Glide and Slide" width="256" height="256"> <img src="/docs/images/crossesandtees/tee.jpg" alt="Tees, Top row Slides, Bottom Glides, Protruding and Intruding " width="256" height="256">
 
 ## [Gridfinity Integration](/docs/components/GridfinityIntegration.md)
-<img src="/docs/images/gridfinity/gridfinitybaseplate.jpg" alt="A Gridfinity Baseplate Glue-on" width="256" height="256"> <img src="/docs/images/gridfinity/gridfinitymountbottom.jpg" alt="A Gridfinity Mount, Bottom View" width="256" height="256">
+<img src="/docs/images/gridfinity/gridfinitybaseplatebolton.webp" alt="A Gridfinity Baseplate Bolt-On" width="256" height="256"> <img src="/docs/images/gridfinity/gridfinitybinbasebolton.webp" alt="A Gridfinity Bin Base Bolt-On" width="256" height="256">
 
 ## [Hinges](/docs/components/Hinges.md)
 <img src="/docs/images/hinge/hinge.jpg" alt="A Hinge" width="256" height="256">
 
 ## [OpenGrid Integration](/docs/components/OpenGridIntegration.md)
-<img src="/docs/images/opengrid/opengridbaseplate.jpg" alt="An OpenGrid baseplate glue-on" width="256" height="256"> <img src="/docs/images/opengrid/opengridmountbottom.jpg" alt="An OpenGrid mount, bottom view" width="256" height="256">
+<img src="/docs/images/opengrid/opengridbaseplatebolton.webp" alt="An OpenGrid baseplate bolt-on" width="256" height="256"> <img src="/docs/images/opengrid/opengridsnapbolton.webp" alt="An OpenGrid snap bolt-on" width="256" height="256">
 
 ## [Plates](/docs/components/Plates.md)
 <img src="/docs/images/plate/plate.jpg" alt="A 2x2 Plaice Plate" width="256" height="256">
@@ -33,8 +36,8 @@
 ## [Plugs](/docs/components/Plugs.md)
 <img src="/docs/images/plugs/plugbottoms.jpg" alt="Plugs, Clipped and Nubbed, Bottom Views" width="256" height="256"> <img src="/docs/images/plugs/plugtops.jpg" alt="Plugs, Clipped and Nubbed, Top Views" width="256" height="256">
 
-## [Slide Clips](/docs/components/SlideClips.md)
-<img src="/docs/images/slideclip.jpg" alt="A Slide Clip" width="256" height="256">
+## [Slide and Glide Bolt-Ons](/docs/components/SlideAndGlideBoltOns.md)
+<img src="/docs/images/slideandglideboltons.webp" alt="A collection of slide and glide bolt-ons" width="256" height="256">
 
 ## [Stacking Lips](/docs/components/StackingLips.md)
 <img src="/docs/images/stackinglips.jpg" alt="Stacking Lips, Intruding and Protruding" width="256" height="256">
