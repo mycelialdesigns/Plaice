@@ -33,7 +33,7 @@ By far the easiest and most-preferred way to integrate with Plaice is to simply 
 a Plaice [clipped or nubbed backing](/docs/components/Backings.md), as described in more detail on the [dedicated page](/docs/design/BoltOnComponents.md).
 While this is low-friction for the designer, and is completely agnostic to choice
 of technoogies, it only generally applies to components which only seek to integrate with the
-connector-and-socket portion of Plaice. Anything else will need to use one of the two other methods.
+[connector](/docs/design/ClipInterface.md)-and-[socket](/docs/design/Sockets.md) portion of Plaice. Anything else will need to use one of the two other methods.
 
 ### Medium Friction, High Customizability: CAD Derivatives
 
@@ -49,7 +49,7 @@ Plaice components.
 ### Medium-High Friction, High Customizability: STL Modifications
 
 3d printing has an extensive `.stl` remix culture, and so it's important that Plaice supports the workflow.
-However, in Plaice, the clearances applied to connectors and slides are _meaningful_, and there are good
+However, in Plaice, the [clearances](/docs/design/Clearances.md) applied to connectors and slides are _meaningful_, and there are good
 structural reasons for individual users of the system to want to minimize those clearances to tune
 the system to their own printer. As a result, exported non-parametric 3d models are in a bit of a difficult
 spot -- while they can be remixed, providing all standard clearance levels would require creating multiple
