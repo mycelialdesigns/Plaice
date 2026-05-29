@@ -4,17 +4,17 @@
 Designing Plaice components to fit together requires careful attention to the nominal clearances between components.
 
 ## Preliminary Definitions
-Clearances describe the size of gaps between two surfaces, and so it's important to have a clear reference to what the surfaces
-involved are. In our case, there are actually three different sources for relevant geometry to reference: "*interface*" geometry
-which consists of 2d profiles in CAD expressing an idealized meeting-curve of two components, "*model*" component geometry which
-represents the geometry expressed in 3d CAD and/or in exported .stl files, and "*de facto*" geometry which is the physical geometry
+Clearances describe the size of gaps between two surfaces so it's important to have a clear reference to what the surfaces
+involved are. In our case, there are three different sources for relevant geometry to reference: "*interface*" geometry
+which consists of 2D profiles in CAD expressing an idealized meeting-curve of two components, "*model*" component geometry which
+represents the geometry expressed in 3D CAD and/or in exported .stl files, and "*de facto*" geometry which is the physical geometry
 of real components after printing. 
 
 ## Print Bias Correction Clearances
-Due to artifacts of the 3d printing process, de facto geometry will never exactly match model geometry. However, we have control
+Due to artifacts of the 3D printing process, de facto geometry will never exactly match model geometry. However, we have control
 over the model geometry, which means that if we have systematic biases in how de facto geometry deviates from how we want it
 to be, we can simply adjust the model geometry to compensate for those biases as best we can. The de facto geometry as we'd like it to
-be is what we call *idealized* geometry, and it's essentially what we would get if we had a 3d printer with no printing artifacts whatsoever
+be is what we call *idealized* geometry, and it's essentially what we would get if we had a 3D printer with no printing artifacts whatsoever
 and a layer height approaching zero (+ perfectly smooth). 
 
 Consequently, our approach to creating modeling geometry can be kicked off by starting with the idealized geometry, and then introducing small tweaks
@@ -40,8 +40,8 @@ this modification to the design geometry over the idealized geometry the _XY Hol
 
 ### Z Overhang Depression Clearance
 <img src="/docs/images/slideinterface/clearancedslide.png" alt="Slide Interface, Clearanced For Z Printing" width="256" height="256">
-The overall process of 3d printing introduces some systematic errors which can make overhanging geometry depress along the Z axis toward the
-build plate, both from physical causes and from the way that slicers interpret 3d designs. 
+The overall process of 3D printing introduces some systematic errors which can make overhanging geometry depress along the Z axis toward the
+build plate, both from physical causes and from the way that slicers interpret 3D designs. 
 
 The single biggest physical cause has to do with
 the fact that molten plastic will fall _down_ under the influence of gravity, and overhangs will tend to do the same unless cooled rapidly.
@@ -56,7 +56,7 @@ call this applied clearance between the idealized and design geometry the _Z Ove
 
 ## The Clearance Multiplier
 Print bias correction clearances aren't the only clearances we need to care about in the process of preparing Plaice components for printing.
-Every 3d printer has its own quirks, and even when fully calibrated and printing geometry which corrects systematic printer biases,
+Every 3D printer has its own quirks, and even when fully calibrated and printing geometry which corrects systematic printer biases,
 individual 3d printers will still exhibit small variations in their output from print-to-print. 
 Plaice components are designed to be printable by most 3d printers, and consequently, it's important that
 we have some kind of mechanism for accommodating these dimensional variations. We do this by introducing additional clearances between mating parts
