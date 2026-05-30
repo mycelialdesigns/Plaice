@@ -63,7 +63,7 @@ between the plugs and the legs of the shelf, which we demonstrate in the followi
 ## Step 5 (Plugged, Bolts)
 <img src="/docs/images/shelfconstruction/step5.webp" alt="Step 5 Visual" width="256">
 
-For each of the clipped plugs mentioned in step 4 a+b, insert a M2 nut into the dedicated
+For each of the clipped plugs mentioned in step 4(a+b), insert a M2 nut into the dedicated
 captive nut channel. Make sure that the nuts are pushed as far back as they go with light pressure.
 
 If you had previously done step 4, you can remove the plugs from their sockets by either pulling
@@ -192,4 +192,4 @@ Repeat this step and the previous one for all four corners.
 Snap the four beams of the top tier onto the thru-nubs of the bottom tier, and secure
 with four 16mm M2 bolts. Iterate the stacking steps if you want to add more tiers.
 
-Finish
+## ...Finish!
