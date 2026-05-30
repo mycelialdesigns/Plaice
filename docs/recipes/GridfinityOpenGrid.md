@@ -133,4 +133,6 @@ Slide the `2 CU x 8 CU` plate on top of the vertically-oriented `8 CU x 8 CU` pl
 Repeat steps 11-15 to secure the remaining OpenGrid baseplates.
 
 <img src="/docs/images/gridfinityopengridconstruction/final.webp" alt="Finished Result" width="256">
-Finish
+
+
+## ...Finish!
