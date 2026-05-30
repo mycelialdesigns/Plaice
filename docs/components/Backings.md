@@ -3,11 +3,10 @@
 <img src="/docs/images/backings/backings.webp" alt="Clipped and Nubbed Backings" width="256">
 
 Several Plaice components (e.g: [gridfinity integration components](/docs/components/GridfinityIntegration.md), [opengrid integration components](/docs/components/OpenGridIntegration.md),
-and [slide and glide bolt-ons](/docs/components/SlideAndGlideBoltOns.md)) are [bolt-on](/docs/design/BoltOnComponents.md) components which do not have their own [clipped or nubbed connectors](/docs/design/ClipInterface.md),
-but instead rely upon backings to provide connector functionality.
+and [slide and glide bolt-ons](/docs/components/SlideAndGlideBoltOns.md)) are [bolt-on](/docs/design/BoltOnComponents.md) components which do not have their own [clipped or nubbed connectors](/docs/design/ClipInterface.md). They instead rely upon backings to provide connector functionality.
 
-Both clipped and nubbed backings are fairly similar to [clipped and nubbed covers](/docs/components/Covers.md) in that they have the same external dimensions, but they have different
-holes and pockets for [M2 bolts](/docs/design/M2Bolts.md) to reflect their role as a supporting component rather than one that's externally visible.
+Both clipped and nubbed backings are similar to [clipped and nubbed covers](/docs/components/Covers.md) in that they have the same external dimensions, but they have different
+holes and pockets for [M2 bolts](/docs/design/M2Bolts.md) reflecting their role as a supporting component rather than one that's externally visible.
 
 ## Clipped Backings
 
