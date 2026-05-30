@@ -68,4 +68,4 @@ direction, but one which is the opposite of the previous tier.
 Iterate the previous steps from step 4, with the top tier instead substituting corners
 in place of tees and tees in place of crosses.
 
-Finish
+## ...Finish!
