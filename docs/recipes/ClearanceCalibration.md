@@ -50,7 +50,7 @@ in general is to print a `1 CU x 1 CU` footprint [beam](/docs/components/Beams.m
 use as a "clip priming tool" with the nubbed end, but this is not strictly required
 to perform these calibration steps.
 
-Finally, similar priming steps should be performed for [slide connections](/docs/design/SlideInterface.md) -- after printing something with
+Finally, similar priming steps should be performed for [slide connections](/docs/design/SlideInterface.md) — after printing something with
 a slide connector, swipe another slide-connector component over each of the protruding and intruding slides a few times. Doing
 so ensures that blemishes and surface roughness left behind by any supports get somewhat smoothed out, resulting in a more
 accurate finished piece.
@@ -103,5 +103,7 @@ questions related to slide fitment with an appropriate level of detail.
 Take a clipped cover and a tee, and verify that four of the clipped connectors can be fully inserted into the stub sockets of the tee, with
 the placement resulting in a flush alignment. A loose fit is perfectly fine here.
 
-## Finished!
+
+
+## ...Finished!
 
