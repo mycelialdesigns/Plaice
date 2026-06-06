@@ -3,9 +3,9 @@
 
 <img src="/docs/images/spiceorganizerconstruction/final.webp" alt="Spice Organizer" width="256"> <img src="/docs/images/boxconstruction/step8.webp" alt="Stacking Box" width="256"> 
 
-Print Once, Reconfigure as Your Space Evolves!
+**_Print Once, Reconfigure as Your Space Evolves!_**
 
-# Description
+# What Is Plaice?
 <img src="/docs/images/clearancecalibration/platefit.webp" alt="Two plates slid together" width="256">
 
 Plaice is a 3d-printable modular construction system for living space organization. Unlike other similar
@@ -19,17 +19,18 @@ it's possible to make:
 - Drawers
 - Hinged Clamshell Boxes
 - Drawer Dividers
-... among many, many more things!
 
-Open, endlessly [remixable](/docs/design/InterfacingAndRemixing.md), with seamless compatibility with other systems
-like [Gridfinity](/docs/components/GridfinityIntegration.md) and [OpenGrid](/docs/components/OpenGridIntegration.md), Plaice makes
-your organization dreams achievable by allowing experimentation without waste through modular composition. 
+**_... among many, many more things!_**
+
+Open, endlessly [remixable](/docs/design/InterfacingAndRemixing.md). Seamless compatibility with other systems
+like [Gridfinity](/docs/components/GridfinityIntegration.md) and [OpenGrid](/docs/components/OpenGridIntegration.md). Plaice makes
+your organization dreams a reality while allowing experimentation without waste through modular composition. 
 Designed with simplicity and internal coherence in mind, Plaice stands out from similar "universal" organization
-systems in its relatively small number of core components with thoughtful, carefully-engineered designs.
+systems in its relatively small number thoughtful, carefully-engineered components.
 
-Printing for most parts assumes settings for a .`4 mm` nozzle, two perimeters, and a layer height of `0.1 mm`. Most components will print without the need for slicer-generated supports, but check individual component pages for details. 
+_(Printing for most parts assumes settings for a .`4 mm` nozzle, two perimeters, and a layer height of `0.1 mm`. Most components will print without the need for slicer-generated supports, but check individual component pages for details.)_
 
-To get started with using Plaice, first follow the [clearance calibration guide](/docs/recipes/ClearanceCalibration.md),
+**To get started with using Plaice**, first follow the [clearance calibration guide](/docs/recipes/ClearanceCalibration.md),
 and then feel free to check out the other [recipes](/docs/recipes/Index.md).
 
 ---
