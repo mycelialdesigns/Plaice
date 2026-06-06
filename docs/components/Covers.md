@@ -14,7 +14,7 @@ two [slide-connected](/docs/design/SlideInterface.md) plates. (For an example of
 `.25 HU` is close to the height of covers purely due to a combination of divisibility and clearance concerns while trying to simultaneously
 respect the amount of material used. Firstly, since a division of `.5 HU`
 already exists naturally in Plaice (see [Units](/docs/design/Units.md)), that gives a starting candidate for the cover thickness. However,
-there would be several problems with doing so -- in particular, assemblies built out of Plaice components couldn't assume that a `1 HU`
+there would be several problems with doing so — in particular, assemblies built out of Plaice components couldn't assume that a `1 HU`
 gap between components (e.g: a bin inside a cubby) would suffice for clearance, because all of the involved components could have
 (and should be allowed to have) covers on them. Consequently, the next nice divisor available is `.25 HU = 1.75 mm`. If we're working
 with a typical "structural" printing profile, we can assume four `.4mm` perimeters in XY = `1.6 mm`, and roughly the same material thickness
