@@ -3,7 +3,7 @@
 <img src="/docs/images/plaicesocket.png" alt="A Plaice Socket" height="256"><img src="/docs/images/plaicesocketside.png" alt="A Plaice Socket, Side View (See-Thru)" height="256">
 
 Plaice _Sockets_ are chamfered rounded-square voids which allow the insertion of Plaice [clipped and nubbed connectors](/docs/design/ClipInterface.md).
-They have a [`1 HU`](/docs/design/Units.md) depth, with `2 x 1.5 mm` devoted to 45-degree chamfered sections. The remaining `4 mm` consists of
+They have a [`1 HU`](/docs/design/Units.md) depth, with the leading `2 x 1.5 mm` devoted to 45-degree chamfered sections on each side. The remaining `4 mm` has a cross-section of
 a rounded `10 mm` square with a corner fillet (radius of `1.6 mm`). 
 
 ## Strength and Deflection
