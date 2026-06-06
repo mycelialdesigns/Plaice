@@ -3,7 +3,7 @@
 <img src="/docs/images/gridfinityopengridconstruction/step8.webp" alt="A gridfinity bolt-on in the process of being secured to a clipped backing" width="256" height="256">
 
 Sometimes makes more sense to print a Plaice component out of multiple different parts
-bolted together. On the design side, a maker looking to [integrate](/docs/design/InterfacingAndRemixing.md) with the system may be using direct 3d modeling and find the prospect of providing
+to bolt together. On the design side, a maker looking to [integrate](/docs/design/InterfacingAndRemixing.md) with the system may be using direct 3d modeling and find the prospect of providing
 pieces with multiple different levels of clearances to be daunting. Alternatively, when printing, the required support geometry for a unified
 part could require awkwardly-placed or hard-to-remove supports. 
 
