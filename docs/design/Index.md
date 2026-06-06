@@ -9,7 +9,7 @@
 ## [Clip Interface](/docs/design/ClipInterface.md)
 <img src="/docs/images/plugs/plugtops.jpg" alt="Plugs, Clipped and Nubbed" width="256" height="256"> <img src="/docs/images/plugs/plugstogether.jpg" alt="Plugs, Clipped and Nubbed Connected" width="256" height="256">
 
-## [Interfacing and Remixing](/docs/design/InterfacingAndRemixing.md)
+## [Interfacing, Remixing and Licensing](/docs/design/InterfacingAndRemixing.md)
 
 ## [M2 Bolts](/docs/design/M2Bolts.md)
 <img src="/docs/images/shelfconstruction/step15.webp" alt="Nubbed covers secured on the bottom of a shelving unit" width="256" height="256">
