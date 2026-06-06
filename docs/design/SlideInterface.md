@@ -48,7 +48,7 @@ using slides -- schematically, the result looks something like the line-drawing 
 To minimize the maximal stress under an applied load, it is beneficial to spread the induced stresses
 over the largest possible area. One natural way to do this for the situation of the stacked plates is to ensure
 each stack should take a similar cumulative stress. There isn't a simple way to apply that
-criterion verbatim... But we can do the next best thing: We can ensure that the _roles_ of each stack are the same in relation
+criterion verbatim, but we can do the next best thing: We can ensure that the _roles_ of each stack are the same in relation
 to each other.
 
 To do this, all we need to do is to ensure that between every two stacked protrusions, there's an intrusion formed, and
@@ -65,5 +65,5 @@ criterion and use the (max of the) maximum principal stress as a proxy for how c
 
 ## Clearances and Manufacturing Notes
 
-For the slides to fit together, there needs to be some amount of clearance between progruding and intruding slides. Additionally, process-specific (3d printing)
+For the slides to fit together, there needs to be some amount of clearance between protruding and intruding slides. Additionally, process-specific (3d printing)
 biases need to be corrected for. See [the dedicated design page on clearances](/docs/design/Clearances.md). 
