@@ -1,7 +1,7 @@
 # M2 Bolts
 <img src="/docs/images/shelfconstruction/step15.webp" alt="Nubbed covers secured on the bottom of a shelving unit" width="256" height="256">
 
-Plaice largely avoids the use of embedded hardware for the sake of rapid prototypin, but when it comes time to "cement" a design for a household organizer,
+Plaice largely avoids the use of embedded hardware for the sake of rapid prototyping, but when it comes time to "cement" a design for a household organizer,
 it can be advantageous to incorporate hardware for improving the strength of assemblies. (For a worked example of this,
 see e.g: the [recipe for stacking shelves](/docs/recipes/Shelves.md)). Additionally, Plaice leverages hardware in
 situations where printing a single part could be suboptimal in [bolt-on components](/docs/components/BoltOnComponents.md).
@@ -29,11 +29,11 @@ In this case, the following lengths of M2 bolts are inserted from the bolt-on si
 Beyond the case of backing bolt-on components, M2 hardware can be employed in Plaice
 to secure connections which would otherwise be accomplished purely through clip/nub connections. This attatchement provides more resistance to pull-out and some degree of preload. For example, Plaice clipped [covers](/docs/components/Covers.md)
 may be attached to nubbed covers and secured with `6 mm` M2 bolts (together with captive M2 nuts).
-Within Plaices structure, we can generalize that rule to other components with clipped and nubbed connectors:
+We can generalize that rule to other components with clipped and nubbed connectors:
 e.g: a nubbed [plug](/docs/components/Plugs.md) attached to a clipped plug _also_ can be secured with `6 mm` M2 bolts.
 
 But clipped and nubbed connectors aren't the only things that can be on opposite ends (bolt head and nut end) of
-a M2 bolt -- Bolt-on components (TODO: link) atop backings may be at either of the ends. In these
+a M2 bolt -- Bolt-on components atop backings may be at either of the ends. In these
 situations, a single bolt should go through
 end-to-end. In tabular form, here are the required lengths of bolts for every combination of two "ends":
 
@@ -49,7 +49,7 @@ In a Plaice assembly involving thru-nubs, the required M2 bolt lengths may be de
 previous section by adding `7 mm` (`1 HU`) for each (possibly chained) thru-nub, and then rounding up
 to the nearest multiple of `2 mm`. This rounding is not _ strictly required_ if you have readily available bolts
  with the required dimensions, but M2 bolts 
-in `2 mm`-multiple lengths tend to be preferential. 
+in `2 mm`-multiple lengths are generally more likely to be stocked in stores. 
 
 One particular case of this is worth calling out due to its frequency:
 When connecting **two beams** (as one would for [building stacking shelves](/docs/recipes/Shelves.md)),
