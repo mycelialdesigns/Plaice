@@ -32,7 +32,7 @@ Printing for most parts assumes settings for a .`4 mm` nozzle, two perimeters, a
 To get started with using Plaice, first follow the [clearance calibration guide](/docs/recipes/ClearanceCalibration.md),
 and then feel free to check out the other [recipes](/docs/recipes/Index.md).
 
-...
+---
 
 ### [Directory of all Plaice components](/docs/components/Index.md)
 
