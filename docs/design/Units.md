@@ -4,7 +4,8 @@
 Any modular constuction system is faced with the fundamental problem of defining how the system
 will sit in 3D space, and Plaice is no exception. Systems like [Ikea SKADIS](https://www.ikea.com/us/en/cat/skadis-series-37813/), 
 [HSW](https://www.printables.com/model/152592-honeycomb-storage-wall), and [OpenGrid](https://www.opengrid.world/) are
-two-dimensional mounting systems, which is a sub-system of Plaice. But, overall, Plaice has more similarities with three-dimensional grid-based systems like [Gridfinity](https://gridfinity.xyz/) and `8 mm` stud systems ([MegaBloks](https://themegabloks.com/), [LEGO](https://www.lego.com/)). 
+two-dimensional mounting systems, which Plaice also provides as a sub-system.
+That said, Plaice has more similarities with three-dimensional grid-based systems like [Gridfinity](https://gridfinity.xyz/) and `8 mm` stud systems ([MegaBloks](https://themegabloks.com/), [LEGO](https://www.lego.com/)). 
 Unlike those systems, Plaice [plates](/docs/components/Plates.md) may occur oriented parallel
 to any axis-aligned plane -- there is no "preferred" orientation for components of the system
 (like how Gridfinity bins are always oriented "right-side-up"), even if there is a direction
@@ -12,7 +13,7 @@ to any axis-aligned plane -- there is no "preferred" orientation for components 
 frame of reference (with plenty of reference to "quarter height-units" and rotational symmetries),
 it's much simpler in practice to examine frames of reference taken relative to the orientation
 of a Plaice plate that we intend to focus on. By convention, we take the [socket](/docs/design/Sockets.md) grid
-to coinide with the XY plane when considering this plate-relative reference frame.
+to coincide with the XY plane when considering this plate-relative reference frame.
 
 ## Cell Units (CU)
 <img src="/docs/images/grid.webp" alt="Plaice Plate Annotated with Cell Grid" width="256" height="256">
