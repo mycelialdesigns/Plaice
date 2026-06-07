@@ -34,4 +34,4 @@ Just like with crosses, "glide" tees are denoted by two parallel lines engraved 
 ### Printability modifications
 <img src="/docs/images/crossesandtees/teesupports.webp" alt="A Protruding Slide Tee, just after printing" width="256" height="256">
 
-All tees have a printability modification which adds a thick brim to their outer straight to help prevent the tee from toppling while printing.
+All tees have a printability modification which adds three thick brim segments to their outer straights to help prevent the tee from toppling while printing.
