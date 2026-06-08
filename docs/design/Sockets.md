@@ -16,6 +16,8 @@ of socket connectors.
 
 ## Print Correction Clearances
 
+<img src="/docs/images/xysocket.png" alt="A Plaice Socket, Corrected for XY Printing" height="256">
+
 When a socket is printed oriented along the XY plane, the internal radius shrinkage [print correction clearance](/docs/design/Clearances.md) applies, and so the modeled
 CAD geometry needs to have larger fillet radii in the socket corners. However, the straight sides of the CAD geometry don't have an associated correction to apply!
 Empirically, it appears to be the case that uncorrected sockets print with a slight mensicus shape along those nominally straight walls, almost as if they're "smoothing"
