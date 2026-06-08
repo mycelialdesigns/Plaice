@@ -20,7 +20,9 @@ and a layer height approaching zero (+ perfectly smooth).
 Consequently, our approach to creating modeling geometry can be kicked off by starting with the idealized geometry, and then introducing small tweaks
 to the model geometry to correct for differences from the ideal which would occur when turned into de facto geometry via printing. These small tweaks
 are all in the form of clearances applied between the idealized geometry and the modeling geometry at different locations throughout the model, and
-so we call them *print correction clearances*. It's important to note that these clearances are meant to be somewhat of a statistical average of the
+so we call them *print correction clearances*. Typically, the additional clearance is applied where relevant to the geometry, and the surrounding
+geometry has a smooth transition back to the uncorrected geometry where the corrections are not required.
+It's important to note that these clearances are meant to be somewhat of a statistical average of the
 clearance biases that they're meant to correct for across _all_ printed Plaice components, which says nothing of the variation, but we can simply
 lump that in with other factors which determine our overall manufacturing tolerances.
 
