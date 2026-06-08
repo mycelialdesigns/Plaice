@@ -14,6 +14,13 @@ what a solid plate would experience under a one-sided load, and around the de fa
 in the socket width. Consequently, Plaice sockets are the smallest dimensions that they can be while maintaining the functionality
 of socket connectors. 
 
+## Print Correction Clearances
+
+When a socket is printed oriented along the XY plane, the internal radius shrinkage [print correction clearance](/docs/design/Clearances.md) applies, and so the modeled
+CAD geometry needs to have larger fillet radii in the socket corners. However, the straight sides of the CAD geometry don't have an associated correction to apply!
+Empirically, it appears to be the case that uncorrected sockets print with a slight mensicus shape along those nominally straight walls, almost as if they're "smoothing"
+out the radius shrinkage correction from the filleted corners. To correct for this, the CAD geometry for XY sockets replaces the straight segments with arcs which
+are constrained to be tangent with the (enlarged) corner fillets and also with the centers of each segment.
 
 ## Manufacturability
 
