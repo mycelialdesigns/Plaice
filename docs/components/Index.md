@@ -7,7 +7,7 @@
 <img src="/docs/images/beams/keyaccessbeambottom.jpg" alt="A Key-Access Beam, Bottom View" width="256" height="256"> <img src="/docs/images/beams/thrubeambottom.jpg" alt="A Thru Beam, Bottom View" width="256" height="256">
 
 ## [Corner Caps](/docs/components/CornerCaps.md)
-<img src="/docs/images/cornercap/cornercap.jpg" alt="A Corner Cap" width="256" height="256">
+<img src="/docs/images/cornercap/combinedcornercap.webp" alt="A Corner Cap, Parts Combined" width="256" height="256"> <img src="/docs/images/cornercap/cornercap.webp" alt="A Corner Cap" width="256" height="256">
 
 ## [Corner Stacking Caps](/docs/components/CornerStackingCaps.md)
 <img src="/docs/images/thincornerstackinglip/thincornerstackinglip.jpg" alt="A Thin Corner Stacking Cap" width="256" height="256"> <img src="/docs/images/thickcornerstackinglip/thickcornerstackinglip.jpg" alt="A Thick Corner Stacking Cap" width="256" height="256">
