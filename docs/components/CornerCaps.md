@@ -1,32 +1,11 @@
 # Corner Caps
 
-<img src="/docs/images/cornercap/cornercap.jpg" alt="A Corner Cap" width="256" height="256"> <img src="/docs/images/cornercap/cornercapback.jpg" alt="A Corner Cap, Back View" width="256" height="256"> 
+<img src="/docs/images/cornercap/cornercap.webp" alt="A Corner Cap" width="256" height="256"> <img src="/docs/images/cornercap/cornercapback.webp" alt="A Corner Cap, Back View" width="256" height="256"> 
+<img src="/docs/images/cornercap/combinedcornercap.webp" alt="A Corner Cap, Both Halves" width="256" height="256"> 
 
 Plaice corner caps are used whenever three Plaice [corners](/docs/components/Corners.md) meet with three [plates](/docs/components/Plates.md) spanning between them, and they
-"cap off" the remaining space to a point. They have two real [slide connectors](/docs/design/SlideInterface.md) along what resembles a Plaice "corner"
-component and four other "stub" slide
-connectors, with each protruding [`1 CU`](/docs/design/Units.md) from the logical "corner" where the plates associated cell-unit grids meet.
-The internal geometry is designed to be able to accommodate [covers](/docs/components/Covers.md) mounted on each of the three attached plates,
-and the length of the chamfer is identical to the internal chamfer on corners. The external
-chamfers are identical to the ones encountered on the outside of corner connectors.
+"cap off" the remaining space at the inerface between the slides. They are composed of an inner part and an outer part which are meant to be joined together with
+a `6 mm` [M2 bolt and nut pair](/docs/design/M2Bolts.md) to straddle the inner and outer sides of a three-corner interface.
 
-Corner caps have stub slides to allow them to be attached as the last step in the assembly of boxes in Plaice.
-It is important to ensure that the real slides are not oriented "vertically" to avoid them sliding out when
-the box is picked up (if clearances are loose). Instead, one of the other two orientations for the real slides
-should be picked.
-
-During assembly, you _will_ encounter interference between the internal chamfers of corner caps belonging to the stub slides
-and their adjacent plates. Don't panic, just continue to push the corner caps through until the plate slightly moves out
-of the way and the cap "snaps" into place. You may need to do this for both stub slides, and you'll also want to check that
-when pushing a stub slide past a slide intrusion on a plate, the chamfer gets pushed all the way through and not just partially
-lodged inside the slide intrusion. Just keep pushing on.
-
-## Printing Tips
-<img src="/docs/images/cornercap/printablecornercap.webp" alt="A Corner Cap, just after printing" width="256" height="256"> 
-Print corner caps with supports for the sake of the flats on the stub slides.
-
-## Chirality
-
-Corner caps are _chiral_ Plaice components, which means that them and their mirror images are not the same. In practice,
-virtually all Plaice assmeblies using corner caps will need both the default corner-cap and its mirror image (mirrored in the slicer)
-in equal proportions. See, e.g: [the recipe for stacking boxes](/docs/recipes/StackingBoxes.md)
+The inner part is the smaller of the two, with a pocket designed for insertion of M2 bolts. Those bolts, in turn, are meant to connect through to a captive nut
+inserted into the outer part. See [the recipe for stacking boxes](/docs/recipes/StackingBoxes.md) for more details.
