@@ -13,6 +13,11 @@ of bolts which (at least) includes `4 mm`, `6 mm`, `10 mm`, `12 mm`, and `16 mm`
 The following is a handy guide
 to what lengths of M2 bolts are required for various scenarios.
 
+### Corner Caps
+
+[Corner caps](/docs/components/CornerCaps.md) are composed of two separate pieces which are meant to be connected
+together with a `6 mm` M2 bolt.
+
 ### Backings onto Bolt-ons
 
 To use bolt-on components in the most straightforward way, where they
