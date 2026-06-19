@@ -12,7 +12,9 @@ stacking boxes in any other sizing by adjusting the dimensions of the components
 - 4 `4 CU x 8 CU` Plates\*
 - 8 `2 CU` [Corners](/docs/components/Corners.md)\*
 - 4 `4 CU` Corners\*
-- 4 [Corner Caps](/docs/components/CornerCaps.md), two of which are mirrored (in your slicer).
+- 4 [Corner Caps](/docs/components/CornerCaps.md)
+- 4 `6 mm` [M2 Bolts](/docs/design/M2Bolts.md)
+- 4 M2 Nuts
 - 2 `4 CU` Protruding [Stacking Lips](/docs/components/StackingLips.md)\*
 - 2 `4 CU` Intruding Stacking Lips\*
 - 2 `2 CU` Protruding Stacking Lips\*
@@ -54,14 +56,23 @@ to mirror the corner stacking caps listed in the ingredients in your slicer prio
 to printing.
 
 ## Step 5
-<img src="/docs/images/boxconstruction/step5.webp" alt="Step 5 Visual" width="256">
+<img src="/docs/images/boxconstruction/step5a.webp" alt="Step 5a Visual" width="256">
 
-Flip the box over and slide the four corner caps onto slides so that the slides on the corner
-caps contact the corner slides attached to the base plate. You *will* encounter interference
-between the chamfer on the corner caps' stub slides and the edges of adjacent plates, but don't panic --
-just apply steady force (pushing against the floor helps for this) to snap them
-into place. Make sure to inspect each corner cap to ensure that they are seated properly -- you
-can tell by whether or not the corner cap's outer chamfers align with the chamfers of the corner slides.
+Take the outer part for a corner cap and insert a nut into its captive nut channel,
+then place it on the outside of the box-under-construction at an interface between
+three corner slides.
+
+<img src="/docs/images/boxconstruction/step5b.webp" alt="Step 5b Visual" width="256">
+
+With the outer part of the corner cap in place, take the inner part and place it on
+the inside of the box, opposite to the previously-placed outer part. Secure it in place
+with a `6 mm` M2 bolt.
+
+<img src="/docs/images/boxconstruction/step5c.webp" alt="Step 5c Visual" width="256">
+
+Repeat this step for all four bottom corners of the box-under-construction.
+
+<img src="/docs/images/boxconstruction/step5d.webp" alt="Step 5d Visual" width="256">
 
 ## Step 6
 <img src="/docs/images/boxconstruction/step6.webp" alt="Step 6 Visual" width="256">
