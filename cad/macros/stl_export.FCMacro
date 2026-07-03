@@ -1,0 +1,200 @@
+# To run this script, you must have numpy-stl installed system-wide, with its' "stl2bin" binary.
+import os.path
+import os
+import Mesh
+import subprocess
+import sys
+
+# Go up into the macros directory, and from there to the "cad" directory.
+base_file_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+base_export_path = os.path.join(base_file_path, "export/")
+export_list = []
+# Size in MB above which we won't include a .STL, and just opt for a .3mf instead.
+stl_file_size_culling_threshold = 100000000
+
+mesh_export_tolerance = 0.1
+
+pows_of_two = [1, 2, 4, 8]
+beam_heights = [1, 2, 3, 6, 12, 24, 48]
+beam_tapers = [1, 2]
+
+thru_beam_height_cutoff = 6
+hex_key_beam_height_cutoff = 5
+
+
+# Assumes that the filename, the object to export, and the exported name prefix
+# are all the same
+def add_single_object_file(object_name):
+    global export_list
+    export_list.append((object_name, [(object_name, object_name, object_name)]))
+    
+def export_object(document, object, folder_name, export_name):
+    object.touch()
+    document.recompute()
+
+    # Create container directory if it doesn't exist
+    folder_path = os.path.join(base_export_path, folder_name) 
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    
+    # First, export an ASCII .stl
+    stl_path = os.path.join(folder_path, export_name + ".stl")
+    object.Shape.exportStl(stl_path + "ascii")
+
+    # Convert ASCII .stl to binary
+    # TODO: This assumes we're running from a Linux Flatpak, generalize.
+    subprocess.run("flatpak-spawn --host stl2bin " + stl_path + "ascii " + stl_path,
+                              shell=True, capture_output=True)
+    os.remove(stl_path + "ascii")
+  
+    # Retcon and remove it if it turns out to be too big.
+    if os.path.getsize(stl_path) > stl_file_size_culling_threshold:
+        os.remove(stl_path)
+
+    # Export a .3mf
+    mfmfmf_path = os.path.join(folder_path, export_name + ".3mf")
+    shape = object.Shape
+
+    # Compile the mesh
+    mesh = Mesh.Mesh()
+    vertices, facets = shape.tessellate(mesh_export_tolerance)
+    mesh_data = []
+    for facet in facets:
+        triangle = [vertices[facet[0]], vertices[facet[1]], vertices[facet[2]]]
+        mesh_data.append(triangle)
+    mesh.addFacets(mesh_data)
+
+    mesh.write(mfmfmf_path)
+
+
+# TODO: Looking at this list, there are actually lots of renames you may want to do...
+# That way the alphabetical order is nicer, and stuff should be easier to find.
+
+#add_single_object_file("clippedcover")
+#add_single_object_file("nubbedcover")
+#
+#add_single_object_file("clippedplug")
+#
+#add_single_object_file("clippedbacking")
+#add_single_object_file("nubbedbacking")
+#
+#add_single_object_file("printablekeyaccessboltedbeam")
+#add_single_object_file("printablethrubeam")
+
+#add_single_object_file("printablethrunub")
+#
+#add_single_object_file("cornercapinside")
+#add_single_object_file("cornercapoutside")
+
+# TODO: This actually needs a rename to say "cornerstackingcap"
+#add_single_object_file("cornerstackinglip")
+#add_single_object_file("thincornerstackinglip")
+#
+#add_single_object_file("printablecorner")
+#
+#add_single_object_file("crossglide")
+#add_single_object_file("crossslide")
+#add_single_object_file("printableintrudingteeslide")
+#add_single_object_file("printableintrudingteeglide")
+#add_single_object_file("printableprotrudingteeslide")
+#add_single_object_file("printableprotrudingteeglide")
+#
+#add_single_object_file("gridfinitybaseplatebolton")
+#add_single_object_file("gridfinitybinbasebolton")
+#
+#add_single_object_file("hinge")
+#
+#add_single_object_file("opengridbaseplatebolton")
+#add_single_object_file("opengridsnapbolton")
+#add_single_object_file("printableplate")
+
+#add_single_object_file("standalonenubbedplug")
+#
+#add_single_object_file("intrudingglidebolton")
+#add_single_object_file("protrudingglidebolton")
+#add_single_object_file("intrudingslidebolton")
+#add_single_object_file("protrudingslidebolton")
+#
+#add_single_object_file("protrudingstackinglip")
+#add_single_object_file("intrudingstackinglip")
+#
+#add_single_object_file("stackingpeg")
+#
+# TODO: Add non-"printable" base models for remixing
+# TODO: Also add laser cut and routing exports
+
+for file_name, object_list in export_list:
+    # Open file and recompute
+    file_path = os.path.join(base_file_path, file_name + ".FCStd")
+    doc = FreeCAD.openDocument(file_path)
+    doc.recompute()
+    
+    # Export objects from document
+    for folder_name, object_name, export_name in object_list:
+        object = doc.getObjectsByLabel(object_name)[0]
+        properties = dir(object)
+        if "LengthInCells" in properties and "WidthInCells" in properties:
+            # Plate-like thing
+            for length in pows_of_two:
+                object.LengthInCells = length
+                for width in pows_of_two:
+                    # Eliminate duplicates
+                    if length > width:
+                        continue
+                    name = export_name + "_" + str(width) + "x" + str(length)
+                    object.WidthInCells = width
+                    
+                    export_object(doc, object, folder_name, name)
+            
+        elif "LengthInCells" in properties:
+            # Corner-like thing
+            for length in pows_of_two:
+                object.LengthInCells = length
+                name = export_name + "_" + str(length)
+                
+                export_object(doc, object, folder_name, name)
+
+        elif "LengthInGridfinityCells" in properties and "WidthInGridfinityCells" in properties:
+            for length in pows_of_two:
+                if length == 1:
+                    continue
+                object.LengthInGridfinityCells = int(length / 2)
+                for width in pows_of_two:
+                    # Eliminate duplicates
+                    if width == 1 or length > width:
+                        continue
+                    object.WidthInGridfinityCells = int(width / 2)
+
+                    name = export_name + "_" + str(int(width / 2)) + "x" + str(int(length / 2))
+                    export_object(doc, object, folder_name, name)
+
+        elif "TaperLengthInCells" in properties and "TaperWidthInCells" in properties and "HeightInHeightUnits" in properties:
+            # Beam-like thing
+            for width in beam_tapers:
+                object.TaperWidthInCells = width
+                for length in beam_tapers:
+                    object.TaperLengthInCells = length
+                    for height in beam_heights:
+                        if "keyaccessboltedbeam" in object_name and height < hex_key_beam_height_cutoff:
+                            continue
+                        object.HeightInHeightUnits = height
+                        name = export_name + "_" + str(height) + "-" + str(width) + "x" + str(length)
+                        
+                        export_object(doc, object, folder_name, name)
+            
+        elif "HeightInHeightUnits" in properties:
+            # Thru-beam-like thing
+            for height in beam_heights:
+                if "thrubeam" in object_name and height > thru_beam_height_cutoff:
+                    continue
+                object.HeightInHeightUnits = height
+
+                name = export_name + "_" + str(height)
+                
+                export_object(doc, object, folder_name, name)
+        else:
+            # Assume it's just a single stand-alone model.
+            export_object(doc, object, folder_name, export_name)
+    
+    # Close document
+    FreeCAD.closeDocument(file_name)
