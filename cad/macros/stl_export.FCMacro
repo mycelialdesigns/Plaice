@@ -66,61 +66,56 @@ def export_object(document, object, folder_name, export_name):
 
     mesh.write(mfmfmf_path)
 
+#add_single_object_file("backing_clipped")
+#add_single_object_file("backing_nubbed")
 
-# TODO: Looking at this list, there are actually lots of renames you may want to do...
-# That way the alphabetical order is nicer, and stuff should be easier to find.
+#add_single_object_file("beam_bolted_keyaccess_printable")
+#add_single_object_file("beam_thru_printable")
 
-#add_single_object_file("clippedcover")
-#add_single_object_file("nubbedcover")
-#
-#add_single_object_file("clippedplug")
-#
-#add_single_object_file("clippedbacking")
-#add_single_object_file("nubbedbacking")
-#
-#add_single_object_file("printablekeyaccessboltedbeam")
-#add_single_object_file("printablethrubeam")
+#add_single_object_file("cover_clipped")
+#add_single_object_file("cover_nubbed")
 
-#add_single_object_file("printablethrunub")
-#
-#add_single_object_file("cornercapinside")
-#add_single_object_file("cornercapoutside")
+#add_single_object_file("cornercap_inside")
+#add_single_object_file("cornercap_outside")
 
-# TODO: This actually needs a rename to say "cornerstackingcap"
-#add_single_object_file("cornerstackinglip")
-#add_single_object_file("thincornerstackinglip")
-#
-#add_single_object_file("printablecorner")
-#
-#add_single_object_file("crossglide")
-#add_single_object_file("crossslide")
-#add_single_object_file("printableintrudingteeslide")
-#add_single_object_file("printableintrudingteeglide")
-#add_single_object_file("printableprotrudingteeslide")
-#add_single_object_file("printableprotrudingteeglide")
-#
+#add_single_object_file("cornerstackingcap")
+#add_single_object_file("cornerstackingcap_thin")
+
+#add_single_object_file("corner_printable")
+
+#add_single_object_file("cross_glide")
+#add_single_object_file("cross_slide")
+
 #add_single_object_file("gridfinitybaseplatebolton")
 #add_single_object_file("gridfinitybinbasebolton")
-#
+
 #add_single_object_file("hinge")
-#
+
 #add_single_object_file("opengridbaseplatebolton")
 #add_single_object_file("opengridsnapbolton")
-#add_single_object_file("printableplate")
+#add_single_object_file("plate_printable")
 
-#add_single_object_file("standalonenubbedplug")
-#
-#add_single_object_file("intrudingglidebolton")
-#add_single_object_file("protrudingglidebolton")
-#add_single_object_file("intrudingslidebolton")
-#add_single_object_file("protrudingslidebolton")
-#
-#add_single_object_file("protrudingstackinglip")
-#add_single_object_file("intrudingstackinglip")
-#
+#add_single_object_file("plug_nubbed_standalone")
+#add_single_object_file("plug_clipped")
+
+#add_single_object_file("glidebolton_intruding")
+#add_single_object_file("glidebolton_protruding")
+#add_single_object_file("slidebolton_intruding")
+#add_single_object_file("slidebolton_protruding")
+
+#add_single_object_file("stackinglip_protruding")
+#add_single_object_file("stackinglip_intruding")
+
 #add_single_object_file("stackingpeg")
-#
-# TODO: Add non-"printable" base models for remixing
+
+#add_single_object_file("tee_slide_intruding_printable")
+#add_single_object_file("tee_glide_intruding_printable")
+#add_single_object_file("tee_slide_protruding_printable")
+#add_single_object_file("tee_glide_protruding_printable")
+
+add_single_object_file("thrunub_printable")
+
+# TODO: Add non-"printable" base models for remixing as a toggleable option
 # TODO: Also add laser cut and routing exports
 
 for file_name, object_list in export_list:
@@ -175,7 +170,7 @@ for file_name, object_list in export_list:
                 for length in beam_tapers:
                     object.TaperLengthInCells = length
                     for height in beam_heights:
-                        if "keyaccessboltedbeam" in object_name and height < hex_key_beam_height_cutoff:
+                        if "beam_bolted_keyaccess" in object_name and height < hex_key_beam_height_cutoff:
                             continue
                         object.HeightInHeightUnits = height
                         name = export_name + "_" + str(height) + "-" + str(width) + "x" + str(length)
@@ -185,7 +180,7 @@ for file_name, object_list in export_list:
         elif "HeightInHeightUnits" in properties:
             # Thru-beam-like thing
             for height in beam_heights:
-                if "thrubeam" in object_name and height > thru_beam_height_cutoff:
+                if "beam_thru" in object_name and height > thru_beam_height_cutoff:
                     continue
                 object.HeightInHeightUnits = height
 
