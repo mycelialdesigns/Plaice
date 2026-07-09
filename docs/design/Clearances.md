@@ -73,8 +73,8 @@ though it may wind up being a loose fit).
 
 ## Clearance Levels
 For .stl export of Plaice components, having a continuum of possible clearance multiplier values is untenable. To resolve this problem, we instead define
-four clearance _levels_ for different values of the clearance multiplier, termed _Tight_ for `1.0`, _Standard_ for `1.25`, _Relaxed_ for `1.5`, and
-_Loose_ for `1.75`. 
+four clearance _levels_ for different values of the clearance multiplier, termed _Close_ for `1.0`, _Default_ for `1.25`, _Easy_ for `1.5`, and
+_Forgiving_ for `1.75`. 
 
 ## Clearance Types
 The "base" or "fundamental" clearance values which the clearance multiplier multiplies are assigned based on the intent behind mating geometry,
