@@ -40,3 +40,5 @@ and then feel free to check out the other [recipes](/docs/recipes/Index.md).
 ### [Directory of Plaice design articles](/docs/design/Index.md)
 
 ### [Contributor Guide](/CONTRIBUTING.md)
+
+If you like this project, consider donating to the original creator at <https://paypal.me/MycelialDesigns>

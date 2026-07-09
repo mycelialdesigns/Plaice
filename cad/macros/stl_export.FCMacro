@@ -21,6 +21,7 @@ beam_tapers = [1, 2]
 thru_beam_height_cutoff = 6
 hex_key_beam_height_cutoff = 5
 
+clearance_levels = [("close", "1.0"), ("default", "1.25"), ("easy", "1.5"), ("forgiving", "1.75")]
 
 # Assumes that the filename, the object to export, and the exported name prefix
 # are all the same
@@ -66,130 +67,143 @@ def export_object(document, object, folder_name, export_name):
 
     mesh.write(mfmfmf_path)
 
-#add_single_object_file("backing_clipped")
-#add_single_object_file("backing_nubbed")
+add_single_object_file("backing_clipped")
+add_single_object_file("backing_nubbed")
 
-#add_single_object_file("beam_bolted_keyaccess_printable")
-#add_single_object_file("beam_thru_printable")
+add_single_object_file("beam_bolted_keyaccess_printable")
+add_single_object_file("beam_thru_printable")
 
-#add_single_object_file("cover_clipped")
-#add_single_object_file("cover_nubbed")
+add_single_object_file("cover_clipped")
+add_single_object_file("cover_nubbed")
 
-#add_single_object_file("cornercap_inside")
-#add_single_object_file("cornercap_outside")
+add_single_object_file("cornercap_inside")
+add_single_object_file("cornercap_outside")
 
-#add_single_object_file("cornerstackingcap")
-#add_single_object_file("cornerstackingcap_thin")
+add_single_object_file("cornerstackingcap")
+add_single_object_file("cornerstackingcap_thin")
 
-#add_single_object_file("corner_printable")
+add_single_object_file("corner_printable")
 
-#add_single_object_file("cross_glide")
-#add_single_object_file("cross_slide")
+add_single_object_file("cross_glide")
+add_single_object_file("cross_slide")
 
-#add_single_object_file("gridfinitybaseplatebolton")
-#add_single_object_file("gridfinitybinbasebolton")
+add_single_object_file("gridfinitybaseplatebolton")
+add_single_object_file("gridfinitybinbasebolton")
 
-#add_single_object_file("hinge")
+add_single_object_file("hinge")
 
-#add_single_object_file("opengridbaseplatebolton")
-#add_single_object_file("opengridsnapbolton")
-#add_single_object_file("plate_printable")
+add_single_object_file("opengridbaseplatebolton")
+add_single_object_file("opengridsnapbolton")
+add_single_object_file("plate_printable")
 
-#add_single_object_file("plug_nubbed_standalone")
-#add_single_object_file("plug_clipped")
+add_single_object_file("plug_nubbed_standalone")
+add_single_object_file("plug_clipped")
 
-#add_single_object_file("glidebolton_intruding")
-#add_single_object_file("glidebolton_protruding")
-#add_single_object_file("slidebolton_intruding")
-#add_single_object_file("slidebolton_protruding")
+add_single_object_file("glidebolton_intruding")
+add_single_object_file("glidebolton_protruding")
+add_single_object_file("slidebolton_intruding")
+add_single_object_file("slidebolton_protruding")
 
-#add_single_object_file("stackinglip_protruding")
-#add_single_object_file("stackinglip_intruding")
+add_single_object_file("stackinglip_protruding")
+add_single_object_file("stackinglip_intruding")
 
-#add_single_object_file("stackingpeg")
+add_single_object_file("stackingpeg")
 
-#add_single_object_file("tee_slide_intruding_printable")
-#add_single_object_file("tee_glide_intruding_printable")
-#add_single_object_file("tee_slide_protruding_printable")
-#add_single_object_file("tee_glide_protruding_printable")
+add_single_object_file("tee_slide_intruding_printable")
+add_single_object_file("tee_glide_intruding_printable")
+add_single_object_file("tee_slide_protruding_printable")
+add_single_object_file("tee_glide_protruding_printable")
 
 add_single_object_file("thrunub_printable")
 
 # TODO: Add non-"printable" base models for remixing as a toggleable option
 # TODO: Also add laser cut and routing exports
 
+sheet_doc_path = os.path.join(base_file_path, "sheet.FCStd")
+sheet_doc = FreeCAD.openDocument(sheet_doc_path)
+dims_object = sheet_doc.getObjectsByLabel("dims")[0]
+clearance_multiplier_cell = dims_object.getCellFromAlias("clearancemultiplier")
+
 for file_name, object_list in export_list:
-    # Open file and recompute
-    file_path = os.path.join(base_file_path, file_name + ".FCStd")
-    doc = FreeCAD.openDocument(file_path)
-    doc.recompute()
-    
-    # Export objects from document
-    for folder_name, object_name, export_name in object_list:
-        object = doc.getObjectsByLabel(object_name)[0]
-        properties = dir(object)
-        if "LengthInCells" in properties and "WidthInCells" in properties:
-            # Plate-like thing
-            for length in pows_of_two:
-                object.LengthInCells = length
-                for width in pows_of_two:
-                    # Eliminate duplicates
-                    if length > width:
-                        continue
-                    name = export_name + "_" + str(width) + "x" + str(length)
-                    object.WidthInCells = width
-                    
-                    export_object(doc, object, folder_name, name)
-            
-        elif "LengthInCells" in properties:
-            # Corner-like thing
-            for length in pows_of_two:
-                object.LengthInCells = length
-                name = export_name + "_" + str(length)
-                
-                export_object(doc, object, folder_name, name)
+    for clearance_level_name, clearance_level in clearance_levels:
+        # Set clearance level in spreadsheet
+        dims_object.set(clearance_multiplier_cell, clearance_level)
 
-        elif "LengthInGridfinityCells" in properties and "WidthInGridfinityCells" in properties:
-            for length in pows_of_two:
-                if length == 1:
-                    continue
-                object.LengthInGridfinityCells = int(length / 2)
-                for width in pows_of_two:
-                    # Eliminate duplicates
-                    if width == 1 or length > width:
-                        continue
-                    object.WidthInGridfinityCells = int(width / 2)
+        # Open file and recompute
+        file_path = os.path.join(base_file_path, file_name + ".FCStd")
+        doc = FreeCAD.openDocument(file_path)
+        doc.recompute()
+        
+        # Export objects from document
+        for folder_name, object_name, export_name in object_list:
+            # Prepend clearance level name to folder and export names.
+            folder_name = clearance_level_name + "_" + folder_name
+            export_name = clearance_level_name + "_" + export_name
 
-                    name = export_name + "_" + str(int(width / 2)) + "x" + str(int(length / 2))
-                    export_object(doc, object, folder_name, name)
-
-        elif "TaperLengthInCells" in properties and "TaperWidthInCells" in properties and "HeightInHeightUnits" in properties:
-            # Beam-like thing
-            for width in beam_tapers:
-                object.TaperWidthInCells = width
-                for length in beam_tapers:
-                    object.TaperLengthInCells = length
-                    for height in beam_heights:
-                        if "beam_bolted_keyaccess" in object_name and height < hex_key_beam_height_cutoff:
+            object = doc.getObjectsByLabel(object_name)[0]
+            properties = dir(object)
+            if "LengthInCells" in properties and "WidthInCells" in properties:
+                # Plate-like thing
+                for length in pows_of_two:
+                    object.LengthInCells = length
+                    for width in pows_of_two:
+                        # Eliminate duplicates
+                        if length > width:
                             continue
-                        object.HeightInHeightUnits = height
-                        name = export_name + "_" + str(height) + "-" + str(width) + "x" + str(length)
+                        name = export_name + "_" + str(width) + "x" + str(length)
+                        object.WidthInCells = width
                         
                         export_object(doc, object, folder_name, name)
-            
-        elif "HeightInHeightUnits" in properties:
-            # Thru-beam-like thing
-            for height in beam_heights:
-                if "beam_thru" in object_name and height > thru_beam_height_cutoff:
-                    continue
-                object.HeightInHeightUnits = height
-
-                name = export_name + "_" + str(height)
                 
-                export_object(doc, object, folder_name, name)
-        else:
-            # Assume it's just a single stand-alone model.
-            export_object(doc, object, folder_name, export_name)
-    
-    # Close document
-    FreeCAD.closeDocument(file_name)
+            elif "LengthInCells" in properties:
+                # Corner-like thing
+                for length in pows_of_two:
+                    object.LengthInCells = length
+                    name = export_name + "_" + str(length)
+                    
+                    export_object(doc, object, folder_name, name)
+
+            elif "LengthInGridfinityCells" in properties and "WidthInGridfinityCells" in properties:
+                for length in pows_of_two:
+                    if length == 1:
+                        continue
+                    object.LengthInGridfinityCells = int(length / 2)
+                    for width in pows_of_two:
+                        # Eliminate duplicates
+                        if width == 1 or length > width:
+                            continue
+                        object.WidthInGridfinityCells = int(width / 2)
+
+                        name = export_name + "_" + str(int(width / 2)) + "x" + str(int(length / 2))
+                        export_object(doc, object, folder_name, name)
+
+            elif "TaperLengthInCells" in properties and "TaperWidthInCells" in properties and "HeightInHeightUnits" in properties:
+                # Beam-like thing
+                for width in beam_tapers:
+                    object.TaperWidthInCells = width
+                    for length in beam_tapers:
+                        object.TaperLengthInCells = length
+                        for height in beam_heights:
+                            if "beam_bolted_keyaccess" in object_name and height < hex_key_beam_height_cutoff:
+                                continue
+                            object.HeightInHeightUnits = height
+                            name = export_name + "_" + str(height) + "-" + str(width) + "x" + str(length)
+                            
+                            export_object(doc, object, folder_name, name)
+                
+            elif "HeightInHeightUnits" in properties:
+                # Thru-beam-like thing
+                for height in beam_heights:
+                    if "beam_thru" in object_name and height > thru_beam_height_cutoff:
+                        continue
+                    object.HeightInHeightUnits = height
+
+                    name = export_name + "_" + str(height)
+                    
+                    export_object(doc, object, folder_name, name)
+            else:
+                # Assume it's just a single stand-alone model.
+                export_object(doc, object, folder_name, export_name)
+        
+        # Close document
+        FreeCAD.closeDocument(file_name)
